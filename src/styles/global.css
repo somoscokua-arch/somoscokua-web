@@ -60,7 +60,9 @@ a{color:inherit}
   .head-cta{margin-left:auto}
   .nav{order:3;width:100%;margin:0;gap:22px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
   .head-cta .btn--ghost-w{display:none}
+  .nav .nav-dona{display:none}
 }
+@media (min-width:981px){.head-cta{display:none}}
 .nav .nav-dona{background:var(--orange);color:var(--white);padding:6px 14px;border-radius:999px;margin-block:-6px}
 .nav .nav-dona:hover{background:var(--ink);color:var(--white)}
 .nav a[aria-current="page"]:not(.nav-dona){color:var(--white)}
@@ -250,3 +252,30 @@ section[id],form[id]{scroll-margin-top:140px}
 .legal ul{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px}
 .form-msg a{color:inherit}
 .rte a,.consent a{color:inherit}
+
+/* Etiqueta "Nuevo": siempre píldora pequeña alineada a la izquierda (no se estira en contenedores flex) */
+.new{align-self:flex-start;width:fit-content}
+
+/* Transparencia */
+.redes-block{background:var(--sun);border-radius:30px;padding:24px 26px;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.redes-block h3{font-size:clamp(1.3rem,2.4vw,1.7rem)}
+.transp .fine{opacity:.8}
+
+/* Selector Personas / Empresas en /dona */
+.plan-switch{scroll-margin-top:110px;display:inline-flex;gap:6px;padding:6px;background:rgba(8,50,59,.18);border-radius:999px;margin-bottom:32px}
+.plan-switch__btn{border:0;cursor:pointer;font:700 1rem/1 var(--body);padding:14px 26px;border-radius:999px;background:transparent;color:var(--ink);min-height:44px}
+.plan-switch__btn:hover{background:rgba(255,255,255,.3)}
+.plan-switch__btn[aria-pressed="true"]{background:var(--ink);color:var(--cream)}
+[data-panel][hidden]{display:none}
+#planes-empresas{scroll-margin-top:140px}
+.plan-fine{font-size:.82rem;line-height:1.5;opacity:.85}
+.plans--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.plans--4 .price{font-size:clamp(1.9rem,2.6vw,2.4rem)}
+.plans--4 .price small{display:block;margin-top:6px}
+@media (max-width:1199px){.plans.plans--4{grid-template-columns:repeat(2,minmax(0,1fr))}.plans--4 .plan--feat{transform:none}}
+@media (max-width:640px){.plans.plans--4{grid-template-columns:1fr}}
+.calc-plan{font-size:.95rem}
+.calc .btn--white{margin-top:4px}
+
+/* Menú de escritorio en anchos medios: menos separación para que quepa sin salirse */
+@media (min-width:981px) and (max-width:1180px){.nav{gap:16px;font-size:.95rem}.site-head .wrap{gap:14px}}

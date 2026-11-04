@@ -24,3 +24,11 @@
     msg.append(antes, a, despues);
   });
 });
+
+// Preselecciona el asunto si llega por enlace (ej. /?asunto=Vincular%20mi%20empresa#contacto).
+const asunto = new URLSearchParams(location.search).get('asunto');
+const selAsunto = document.getElementById('v-asunto') as HTMLSelectElement | null;
+if (asunto && selAsunto) {
+  const op = Array.from(selAsunto.options).find((o) => o.text === asunto);
+  if (op) selAsunto.value = op.value;
+}

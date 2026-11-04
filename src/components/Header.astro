@@ -10,7 +10,7 @@ const enDona = Astro.url.pathname.replace(/\/$/, '') === '/dona';
       <a href={textos.nav.dona.href} class="nav-dona" aria-current={enDona ? 'page' : undefined}>{textos.nav.dona.texto}</a>
     </nav>
     <div class="head-cta">
-      <a class="btn btn--white" href={textos.nav.dona.href}>{textos.nav.dona.texto}</a>
+      <a class="btn btn--white" href={textos.nav.dona.href} aria-current={enDona ? 'page' : undefined}>{textos.nav.dona.texto}</a>
     </div>
   </div>
 </header>

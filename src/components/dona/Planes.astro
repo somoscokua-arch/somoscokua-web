@@ -1,28 +1,62 @@
 ---
 import t from '../../content/textos.json';
 import planes from '../../content/planes.json';
+import planesEmpresa from '../../content/planes-empresas.json';
 import pagos from '../../config/pagos.json';
+
+const fmt = (n: number) => '$' + Math.round(n).toLocaleString('es-CO');
+const pct = t.empresas.calculadora.porcentaje;
+const hrefEmpresa = '/?asunto=Vincular%20mi%20empresa#contacto';
 ---
 <section class="band--teal dona-plans">
   <div class="wrap">
-    <div class="plans">
-      {planes.map((p) => {
-        const url = (pagos.planes as Record<string, { url: string }>)[p.id]?.url ?? '';
-        const clase = p.destacado ? 'btn' : 'btn btn--ink';
-        return (
-          <article class:list={['plan', { 'plan--feat': p.destacado }]}>
-            {p.etiqueta && <span class="tag">{p.etiqueta}</span>}
-            <span class="name">{p.nombre}</span>
-            <span class="price">{p.precio} <small>{p.periodo}</small></span>
-            <ul>{p.beneficios.map((b) => <li>{b}</li>)}</ul>
-            {url
-              ? <a class={clase} href={url} target="_blank" rel="noopener">{p.boton}</a>
-              : <a class={clase} href="/dona" data-plan-sin-enlace>{p.boton}</a>}
-          </article>
-        );
-      })}
+    <div class="plan-switch" role="group" aria-label={t.dona.selector.etiqueta}>
+      <button type="button" class="plan-switch__btn" data-tab="personas" aria-pressed="true">{t.dona.selector.personas}</button>
+      <button type="button" class="plan-switch__btn" data-tab="empresas" aria-pressed="false">{t.dona.selector.empresas}</button>
     </div>
-    <p class="pay-note" id="pay-note" aria-live="polite" data-msg-sin-enlace={t.dona.planSinEnlace}>{t.dona.notaPago}</p>
+
+    <div id="planes-personas" data-panel="personas">
+      <div class="plans">
+        {planes.map((p) => {
+          const url = (pagos.planes as Record<string, { url: string }>)[p.id]?.url ?? '';
+          const clase = p.destacado ? 'btn' : 'btn btn--ink';
+          return (
+            <article class:list={['plan', { 'plan--feat': p.destacado }]}>
+              {p.etiqueta && <span class="tag">{p.etiqueta}</span>}
+              <span class="name">{p.nombre}</span>
+              <span class="price">{p.precio} <small>{p.periodo}</small></span>
+              <ul>{p.beneficios.map((b) => <li>{b}</li>)}</ul>
+              {url
+                ? <a class={clase} href={url} target="_blank" rel="noopener">{p.boton}</a>
+                : <a class={clase} href="/dona" data-plan-sin-enlace>{p.boton}</a>}
+            </article>
+          );
+        })}
+      </div>
+      <p class="pay-note" id="pay-note" aria-live="polite" data-msg-sin-enlace={t.dona.planSinEnlace}>{t.dona.notaPago}</p>
+    </div>
+
+    <div id="planes-empresas" data-panel="empresas" hidden>
+      <div class="plans plans--4">
+        {planesEmpresa.map((p) => {
+          const anual = p.aporteMensual * 12;
+          return (
+            <article class:list={['plan', { 'plan--feat': p.destacado }]}>
+              {p.etiqueta && <span class="tag">{p.etiqueta}</span>}
+              <span class="name">{p.nombre}</span>
+              <span class="price">{fmt(p.aporteMensual)} <small>COP / mes</small></span>
+              <ul>{p.beneficios.map((b) => <li>{b}</li>)}</ul>
+              <p class="plan-fine">
+                {t.dona.empresa.aporteAnual}: {fmt(anual)}<br>
+                {t.dona.empresa.descuento}: {fmt(anual * pct)}
+              </p>
+              <a class={p.destacado ? 'btn' : 'btn btn--ink'} href={hrefEmpresa}>{p.boton}</a>
+            </article>
+          );
+        })}
+      </div>
+      <p class="pay-note">{t.dona.notaEmpresas}</p>
+    </div>
   </div>
 </section>
 <script>

@@ -1,7 +1,8 @@
 ---
 import t from '../../content/textos.json';
-import inf from '../../content/informes.json';
-const r = inf.actual;
+import r from '../../content/informes.json';
+import sitio from '../../config/sitio.json';
+const docs = t.transparencia.documentos;
 const resumen = r.distribucion.map((d) => `${d.corto} ${d.porcentaje}%`).join(', ');
 ---
 <section id="transparencia" class="band">
@@ -11,19 +12,20 @@ const resumen = r.distribucion.map((d) => `${d.corto} ${d.porcentaje}%`).join(',
       <h2>{t.transparencia.titulo}</h2>
       <p class="lede">{t.transparencia.texto}</p>
       <div class="rte" set:html={t.transparencia.nota} />
-      <div>
-        <p class="eyebrow" style="margin-bottom:8px">{t.transparencia.tituloArchivo}</p>
-        <ul class="archive">
-          {inf.archivo.map((a) => (
-            <li>
-              <span>{a.titulo}</span>
-              {a.url ? <a href={a.url}><em>{a.nota}</em></a> : <em>{a.nota}</em>}
-            </li>
-          ))}
-        </ul>
+      <div class="redes-block">
+        <h3>{t.transparencia.instagram.titulo}</h3>
+        <a class="btn btn--ink" href={sitio.redes.instagram} target="_blank" rel="noopener">{t.transparencia.instagram.boton}</a>
       </div>
+      <ul class="archive">
+        <li>
+          <span>{docs.titulo}</span>
+          {docs.url ? <a href={docs.url}><em>{docs.nota}</em></a> : <em>{docs.nota}</em>}
+        </li>
+      </ul>
     </div>
 
+    <div class="stack">
+    <p class="fine">{t.transparencia.ejemploNota}</p>
     <article class="report" aria-label={t.transparencia.ariaInforme}>
       <div class="report-top">
         <div>
@@ -47,5 +49,6 @@ const resumen = r.distribucion.map((d) => `${d.corto} ${d.porcentaje}%`).join(',
       </ul>
       <p class="story"><b>{r.historiaTitulo}</b> {r.historia}</p>
     </article>
+    </div>
   </div>
 </section>

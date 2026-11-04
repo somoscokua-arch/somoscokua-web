@@ -1,0 +1,50 @@
+[
+  {
+    "id": "semilla",
+    "nombre": "Empresa Semilla",
+    "aporteMensual": 500000,
+    "destacado": false,
+    "etiqueta": "",
+    "beneficios": [
+      "Certificado de donación",
+      "Rendición de cuentas mensual"
+    ],
+    "boton": "Vincular mi empresa"
+  },
+  {
+    "id": "raiz",
+    "nombre": "Empresa Raíz",
+    "aporteMensual": 1000000,
+    "destacado": false,
+    "etiqueta": "",
+    "beneficios": [
+      "Todo lo del plan Empresa Semilla",
+      "Mención en la sección de empresas aliadas de la web"
+    ],
+    "boton": "Vincular mi empresa"
+  },
+  {
+    "id": "aliada",
+    "nombre": "Empresa Aliada",
+    "aporteMensual": 2000000,
+    "destacado": true,
+    "etiqueta": "El más elegido",
+    "beneficios": [
+      "Todo lo del plan Empresa Raíz",
+      "Una jornada de voluntariado corporativo al año"
+    ],
+    "boton": "Vincular mi empresa"
+  },
+  {
+    "id": "constructora",
+    "nombre": "Empresa Constructora",
+    "aporteMensual": 5000000,
+    "destacado": false,
+    "etiqueta": "",
+    "beneficios": [
+      "Todo lo del plan Empresa Aliada, con dos jornadas de voluntariado corporativo al año",
+      "Informe trimestral de impacto"
+    ],
+    "boton": "Vincular mi empresa"
+  }
+]
