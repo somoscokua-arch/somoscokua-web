@@ -1,10 +1,58 @@
 [
-  { "titulo": "El Ropero de Cokua", "descripcion": "Moda circular con propósito social." },
-  { "titulo": "Ayuda por el terremoto en Chocó", "descripcion": "Atención a familias afectadas." },
-  { "titulo": "Voluntariado en Chocó", "descripcion": "Jornadas en nuevos territorios." },
-  { "titulo": "Senderismo y caminatas ecológicas", "descripcion": "Conocer el territorio para cuidarlo." },
-  { "titulo": "Escuelas rurales", "descripcion": "Mejoramiento de infraestructura educativa." },
-  { "titulo": "Navidades Cokua", "descripcion": "La tradición con la que todo empezó." },
-  { "titulo": "Cine al Barrio", "descripcion": "Cine, juego y encuentro en las comunidades." },
-  { "titulo": "Bazar de Cokua", "descripcion": "Encuentros solidarios para recaudar fondos." }
+  {
+    "titulo": "El Ropero de Cokua",
+    "descripcion": "Moda circular con propósito social.",
+    "foto": "el-ropero-de-cokua.jpg",
+    "alt": "Estantes de madera con ropa doblada, juguetes y mochilas en la tienda de El Ropero de Cokua.",
+    "enfoque": "50% 40%"
+  },
+  {
+    "titulo": "Ayuda por el terremoto en Chocó",
+    "descripcion": "Atención a familias afectadas.",
+    "foto": "terremoto-ayudas.jpg",
+    "alt": "Dos voluntarios, de espaldas y de perfil, cargan y organizan cajas de ayudas en una bodega.",
+    "enfoque": "50% 12%"
+  },
+  {
+    "titulo": "Voluntariado en Chocó",
+    "descripcion": "Jornadas en nuevos territorios.",
+    "foto": "voluntariado-choco.jpg",
+    "alt": "Una niña sonríe y muestra un dibujo en blanco y negro mientras otros niños se sientan en el piso al aire libre.",
+    "enfoque": "15% 40%"
+  },
+  {
+    "titulo": "Senderismo y caminatas ecológicas",
+    "descripcion": "Conocer el territorio para cuidarlo.",
+    "foto": "senderismo-ecologico.jpg",
+    "alt": "Manos de una persona mayor sembrando una pequeña planta en la tierra.",
+    "enfoque": "50% 65%"
+  },
+  {
+    "titulo": "Escuelas rurales",
+    "descripcion": "Mejoramiento de infraestructura educativa.",
+    "foto": "escuelas-rurales.jpg",
+    "alt": "Murales coloridos con un colibrí, flores y personajes en el muro de una escuela rural.",
+    "enfoque": "50% 50%"
+  },
+  {
+    "titulo": "Navidades Cokua",
+    "descripcion": "La tradición con la que todo empezó.",
+    "foto": "navidades-cokua.jpg",
+    "alt": "Una mujer con una niña en brazos recibe un regalo de un Papá Noel.",
+    "enfoque": "50% 50%"
+  },
+  {
+    "titulo": "Cine al Barrio",
+    "descripcion": "Cine, juego y encuentro en las comunidades.",
+    "foto": "cine-al-barrio.jpg",
+    "alt": "Un grupo de niños y adultos reunido al aire libre, varios comiendo paletas, durante una jornada de Cine al Barrio.",
+    "enfoque": "40% 50%"
+  },
+  {
+    "titulo": "Bazar de Cokua",
+    "descripcion": "Encuentros solidarios para recaudar fondos.",
+    "foto": "bazar-de-cokua.jpg",
+    "alt": "Evento comunitario al aire libre con público sentado en sillas verdes frente a un escenario y un mural.",
+    "enfoque": "50% 55%"
+  }
 ]

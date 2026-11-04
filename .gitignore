@@ -5,3 +5,6 @@ dist/
 .env
 .env.*
 !.env.example
+
+# Fotos descartadas o sin usar: no entran al repositorio (ver src/assets/fotos/inventario.md)
+src/assets/fotos/no-usadas/

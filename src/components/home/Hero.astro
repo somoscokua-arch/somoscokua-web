@@ -6,6 +6,6 @@ import Photo from '../Photo.astro';
   <div class="wrap">
     <h1>{t.hero.titulo}</h1>
     <p class="sub">{t.hero.subtitulo}</p>
-    <div class="hero-photo"><Photo etiqueta={t.hero.foto} /></div>
+    <div class="hero-photo"><Photo foto={t.hero.foto} alt={t.hero.fotoAlt} posicion={t.hero.fotoEnfoque} widths={[640, 1000, 1400, 2000]} sizes="(max-width: 1320px) 100vw, 1320px" prioridad /></div>
   </div>
 </section>

@@ -22,7 +22,10 @@ Algunos textos de los JSON contienen HTML (enlaces) y se pintan con `set:html`: 
 ## Decisiones tomadas
 - Dos páginas reales: `/` y `/dona` (en el prototipo era `#dona`). Menú y botones "Dona aquí" apuntan a `/dona`.
 - Se eliminó la franja superior "Prototipo de rediseño".
-- Fotos: por ahora son los bloques de color del prototipo (`Photo.astro`). No se han descargado imágenes.
+- **Fotos reales** (de la web actual, propiedad de la fundación) en `src/assets/fotos/`, reducidas a ≤2000 px de ancho y mostradas con `<Image>` de Astro (WebP y tamaños para celular) mediante `Photo.astro`. Cada foto lleva su texto alternativo y su punto de enfoque (`object-position`) en los JSON (`proyectos.json`, `textos.json`). Sin foto, el componente vuelve al espacio de color. Inventario completo (origen, URL original, uso, alt, menores identificables) en `src/assets/fotos/inventario.md`.
+- **Logo original** (`src/assets/logo-cokua.png`, PNG transparente 995×728, el mismo que la web actual) en encabezado, "Quiénes somos" y footer, vía `Logo.astro`. Reemplazó al SVG recreado.
+- La portada de "Ayuda por el terremoto" en la web actual es el logo; aquí se usó una foto de esa publicación con voluntarios organizando ayudas (sin personas afectadas identificables). En el repositorio solo entran las fotos en uso y el logo; las demás se listan con su URL original en `inventario.md` (`src/assets/fotos/no-usadas/` está en `.gitignore` por si se descargan).
+- No se usaron por ahora fotos nuevas para "Quiénes somos" ni "Historia" (hay propuestas en la conversación y fotos disponibles en el inventario).
 - Planes sin enlace en `pagos.json`: el botón no abre nada y muestra "La suscripción mensual se habilitará muy pronto. Mientras tanto, puedes hacer una donación única con los canales de abajo." (en `textos.json` → `dona.planSinEnlace`). Con URL, el botón abre el enlace en pestaña nueva.
 - Wompi y PayPal de donación única son **reales** (copiados del prototipo).
 - "Transferencia Bancolombia" abre un panel con los datos de `pagos.json → transferencia` (banco, tipo, número, titular, QR). Mientras estén vacíos muestra "Escríbenos para recibir los datos de la cuenta."
@@ -36,6 +39,7 @@ Algunos textos de los JSON contienen HTML (enlaces) y se pintan con `set:html`: 
 - `.new` ("Nuevo") es siempre una píldora pequeña alineada a la izquierda (regla global en `global.css`).
 
 ## Pendientes
+000. **Confirmar con la fundación si el código QR de la web actual (foto 60 del inventario, "Cokua Fundacion Somos Cokua") es el QR de pagos vigente.** No se guardó en el repositorio; si lo es, se carga en `pagos.json → transferencia.qrImagen`.
 00. **Día del lanzamiento: pasar `indexable` a `true` en `src/config/sitio.json`.** Mientras sea `false` (versión de prueba pública) todas las páginas llevan `<meta name="robots" content="noindex">` y `/robots.txt` bloquea a los buscadores, para no competir en Google con la web actual.
 0. **Validar con el contador de la fundación que los beneficios empresariales no constituyan contraprestación** (mención en la web, jornadas de voluntariado corporativo, informe trimestral), porque podrían afectar el carácter de donación y el descuento del art. 257 E.T.
 1. **Enlaces de pasarela** de los planes Amigo, Aliado y Padrino (`pagos.json → planes.*.url`, marcados "PENDIENTE: enlace de la pasarela de la fundación").
@@ -46,9 +50,9 @@ Algunos textos de los JSON contienen HTML (enlaces) y se pintan con `set:html`: 
 6. **Política de datos**: es un borrador con aviso visible "Borrador pendiente de revisión por la fundación". La fundación (idealmente con asesoría legal) debe revisarlo, completar NIT y fecha de vigencia y quitar el aviso.
 7. **Documentos de constitución legal**: falta el enlace real (hoy apunta a `/#transparencia`; en `informes.json → archivo` figura "Enlace de la web actual").
 8. **Mensajes provisionales que cambian al activar funciones**: el de los planes (cuando haya pasarela) y el de los formularios (cuando haya envío real; ver `src/scripts/formularios.ts`).
-9. **Fotos reales** (hero, proyectos, historia del mes) — reemplazar los bloques de color.
+9. **Autorización de menores:** confirmar con la fundación que tiene autorización de los acudientes para publicar las fotos con niños reconocibles (marcadas en `src/assets/fotos/inventario.md`). Quedan por usar/proponer otras fotos del inventario.
 10. **Plantilla de Canva** de la rendición de cuentas mensual (réplica de la tarjeta de la web) y publicación el 15 de cada mes en Instagram.
-11. **Logo**: es una recreación provisional (SVG en `LogoSprite.astro`); sustituir por el oficial.
+11. **Pedir el logo en SVG** a la fundación (hoy se usa el PNG de la web actual, 995×728 px).
 12. **Panel de edición** para que la fundación actualice los JSON de `src/content/` y `src/config/` sin tocar código (candidatos: Keystatic, Decap CMS).
 13. **Envío real de formularios** (voluntariado y certificado) y **dominio/hosting**.
 14. Enlace "TikTok" y favicon definitivo.

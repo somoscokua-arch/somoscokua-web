@@ -1,12 +1,13 @@
 ---
 import t from '../../content/textos.json';
+import Logo from '../Logo.astro';
 ---
 <section id="quienes" class="band">
   <div class="wrap about">
     <div class="about-left">
       <h2>{t.quienes.titulo}</h2>
       <p class="lede">{t.quienes.intro}</p>
-      <svg class="big-logo" viewBox="0 0 240 200" role="img" aria-label="Logo Fundación Somos Cokua"><use href="#cokua-logo"/></svg>
+      <Logo class="big-logo" sizes="(max-width: 820px) 80vw, 330px" alt="Logo de la Fundación Somos Cokua" />
     </div>
     <div class="pillars">
       {t.quienes.pilares.map((p) => (

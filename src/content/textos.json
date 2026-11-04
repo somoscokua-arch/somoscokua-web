@@ -48,7 +48,9 @@
   "hero": {
     "titulo": "Nunca dejes de soñar",
     "subtitulo": "Fundación Somos Cokua",
-    "foto": "Foto grupal de voluntarios (se reutiliza la de la web actual)"
+    "foto": "voluntarios-grupo.jpg",
+    "fotoAlt": "Grupo numeroso de voluntarios y colaboradores posando sonrientes en un salón decorado con banderines azules y blancos.",
+    "fotoEnfoque": "50% 62%"
   },
   "quienes": {
     "titulo": "Quiénes somos",
@@ -234,7 +236,10 @@
     "empresa": {
       "aporteAnual": "Aporte anual",
       "descuento": "Descuento potencial en renta (25%)"
-    }
+    },
+    "foto": "donaciones-portada.jpg",
+    "fotoAlt": "Niños de perfil, en fila y mirando hacia un lado, frente a una pared de madera.",
+    "fotoEnfoque": "75% 50%"
   },
   "footer": {
     "enlaces": [

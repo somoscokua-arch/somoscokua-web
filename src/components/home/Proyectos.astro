@@ -11,7 +11,7 @@ import Photo from '../Photo.astro';
     </div>
     <div class="projects">
       {proyectos.map((p) => (
-        <article class="proj"><Photo etiqueta={t.proyectos.fotoEtiqueta} /><h4>{p.titulo}</h4><p>{p.descripcion}</p></article>
+        <article class="proj"><Photo foto={p.foto} alt={p.alt} posicion={p.enfoque} etiqueta={t.proyectos.fotoEtiqueta} widths={[320, 480, 640, 800]} sizes="(max-width: 480px) 100vw, (max-width: 980px) 50vw, 320px" /><h4>{p.titulo}</h4><p>{p.descripcion}</p></article>
       ))}
     </div>
   </div>

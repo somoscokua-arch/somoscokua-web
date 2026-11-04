@@ -1,0 +1,9 @@
+---
+// Logo original de la fundación (PNG con fondo transparente, 995×728).
+import { Image } from 'astro:assets';
+import logo from '../assets/logo-cokua.png';
+
+interface Props { class?: string; sizes: string; alt?: string }
+const { class: clase, sizes, alt = 'Logo de la Fundación Somos Cokua' } = Astro.props;
+---
+<Image src={logo} alt={alt} class={clase} widths={[160, 320, 640, 995]} sizes={sizes} format="webp" quality={90} loading="eager" />

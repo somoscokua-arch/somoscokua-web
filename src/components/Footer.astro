@@ -1,4 +1,5 @@
 ---
+import Logo from './Logo.astro';
 import sitio from '../config/sitio.json';
 import textos from '../content/textos.json';
 const { redes } = sitio;
@@ -10,7 +11,7 @@ const redesVisibles = [
 ---
 <footer>
   <div class="wrap foot">
-    <div><a class="logo" href="/" aria-label="Inicio"><svg viewBox="0 0 240 200" role="img"><use href="#cokua-logo"/></svg></a></div>
+    <div><a class="logo" href="/" aria-label="Inicio"><Logo sizes="150px" alt="" /></a></div>
     <div>
       <b>{sitio.nombre}</b><br>
       {sitio.nit.valor && <>NIT {sitio.nit.valor}<br></>}

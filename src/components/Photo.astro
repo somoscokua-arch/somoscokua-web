@@ -1,6 +1,35 @@
 ---
-// Espacio de color que sustituye a las fotos hasta tenerlas.
-interface Props { etiqueta: string }
-const { etiqueta } = Astro.props;
+// Foto optimizada con <Image> de Astro (WebP + varios tamaños). Si no hay foto, muestra el espacio de color.
+import { Image } from 'astro:assets';
+
+interface Props {
+  foto?: string;       // nombre del archivo en src/assets/fotos/ (ej. "cine-al-barrio.jpg")
+  alt?: string;        // texto alternativo (descriptivo, sin nombres de personas)
+  etiqueta?: string;   // texto del espacio de color cuando no hay foto
+  posicion?: string;   // punto de enfoque para object-fit: cover (ej. "50% 30%")
+  sizes?: string;
+  widths?: number[];
+  prioridad?: boolean; // true para la foto principal (se carga primero)
+}
+const { foto, alt = '', etiqueta = 'Foto', posicion = '50% 50%', sizes = '100vw', widths = [400, 800, 1200], prioridad = false } = Astro.props;
+
+const fotos = import.meta.glob<{ default: ImageMetadata }>('../assets/fotos/*.{jpg,jpeg,png}', { eager: true });
+const img = foto ? fotos[`../assets/fotos/${foto}`]?.default : undefined;
 ---
-<div class="photo"><span>{etiqueta}</span></div>
+{img ? (
+  <div class="photo photo--img">
+    <Image
+      src={img}
+      alt={alt}
+      widths={widths}
+      sizes={sizes}
+      format="webp"
+      quality={78}
+      style={`object-position:${posicion}`}
+      loading={prioridad ? 'eager' : 'lazy'}
+      fetchpriority={prioridad ? 'high' : undefined}
+    />
+  </div>
+) : (
+  <div class="photo"><span>{etiqueta}</span></div>
+)}
