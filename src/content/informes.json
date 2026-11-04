@@ -1,0 +1,25 @@
+{
+  "actual": {
+    "mes": "Octubre 2026",
+    "sello": "Datos de ejemplo",
+    "kpis": [
+      { "valor": "$3.200.000", "etiqueta": "recibido de socios" },
+      { "valor": "160", "etiqueta": "socios activos" },
+      { "valor": "412", "etiqueta": "personas alcanzadas" }
+    ],
+    "distribucion": [
+      { "corto": "escuelas rurales", "etiqueta": "Educación: escuela rural (ejemplo)", "monto": "$1.216.000", "porcentaje": 38, "color": "teal" },
+      { "corto": "labor social", "etiqueta": "Labor social: Cokua a la Calle", "monto": "$864.000", "porcentaje": 27, "color": "orange" },
+      { "corto": "recreación", "etiqueta": "Recreación: Cine al Barrio", "monto": "$480.000", "porcentaje": 15, "color": "sun" },
+      { "corto": "medio ambiente", "etiqueta": "Medio ambiente: caminata ecológica", "monto": "$256.000", "porcentaje": 8, "color": "sky" },
+      { "corto": "operación", "etiqueta": "Operación y logística", "monto": "$384.000", "porcentaje": 12, "color": "ink" }
+    ],
+    "historiaTitulo": "La historia del mes.",
+    "historia": "Aquí va un párrafo corto y una foto de una actividad concreta: qué se hizo, dónde y qué cambió para la comunidad."
+  },
+  "archivo": [
+    { "titulo": "Septiembre 2026", "nota": "Disponible al lanzar", "url": "" },
+    { "titulo": "Agosto 2026", "nota": "Disponible al lanzar", "url": "" },
+    { "titulo": "Documentos de constitución legal", "nota": "Enlace de la web actual", "url": "" }
+  ]
+}

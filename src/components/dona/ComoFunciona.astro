@@ -1,0 +1,13 @@
+---
+import t from '../../content/textos.json';
+---
+<section class="band">
+  <div class="wrap">
+    <h2>{t.dona.comoFunciona.titulo}</h2>
+    <ol class="steps">
+      {t.dona.comoFunciona.pasos.map((p, i) => (
+        <li><span class="n">{i + 1}</span><b>{p.titulo}</b><span>{p.texto}</span></li>
+      ))}
+    </ol>
+  </div>
+</section>

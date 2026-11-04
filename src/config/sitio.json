@@ -1,0 +1,23 @@
+{
+  "nombre": "Fundación Somos Cokua",
+  "nombreCorto": "Somos Cokua",
+  "descripcionCorta": "Entidad Sin Ánimo de Lucro del Régimen Tributario Especial.",
+  "nit": {
+    "valor": "",
+    "_nota": "PENDIENTE: NIT de la fundación"
+  },
+  "direccion": {
+    "linea1": "Calle 140 Sur 49 31",
+    "linea2": "Caldas, Antioquia, Colombia"
+  },
+  "correo": {
+    "valor": "cokua.oficial@gmail.com",
+    "_nota": "PENDIENTE: confirmar con la fundación que este es el correo de contacto definitivo"
+  },
+  "redes": {
+    "instagram": "https://www.instagram.com/somos_cokua",
+    "facebook": "https://www.facebook.com/share/1cdtfZbMBX/",
+    "tiktok": "",
+    "_nota": "TikTok queda oculto en el footer mientras la URL esté vacía"
+  }
+}

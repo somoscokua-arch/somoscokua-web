@@ -1,0 +1,18 @@
+---
+import t from '../../content/textos.json';
+import eventos from '../../content/eventos.json';
+---
+<section id="eventos" class="band band--teal">
+  <div class="wrap">
+    <h2>{t.eventos.titulo}</h2>
+    <p class="lede" style="margin-top:12px">{t.eventos.texto}</p>
+    <div class="events">
+      {eventos.map((e) => (
+        <div class="event">
+          <div><small>{e.fecha}</small><b>{e.titulo}</b> <span>{e.lugar}</span></div>
+          <a class="btn btn--ink" href={e.boton.href}>{e.boton.texto}</a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

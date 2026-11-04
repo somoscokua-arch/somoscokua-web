@@ -1,0 +1,14 @@
+---
+import t from '../../content/textos.json';
+import faq from '../../content/faq.json';
+---
+<section class="band" id="preguntas">
+  <div class="wrap">
+    <h2>{t.dona.faqTitulo}</h2>
+    <div class="faq">
+      {faq.map((f) => (
+        <details><summary>{f.pregunta}</summary><p set:html={f.respuesta} /></details>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,689 @@
+<title>Somos Cokua</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=Mr+Dafoe&display=swap">
+<style>
+/* Layout: fiel a la web Wix actual — bandas de color a todo el ancho (teal, crema, naranja), tarjetas redondeadas apiladas, titulares redondeados gigantes. Se mantiene un solo tema claro por fidelidad a la marca. */
+:root{
+  --teal:#0197B2;      /* header, hero, footer */
+  --ink:#08323B;       /* texto y botones oscuros */
+  --cream:#F6F4E7;     /* fondo de secciones */
+  --orange:#FF741F;    /* acento / "Transformamos vidas" */
+  --sun:#F9C05F;       /* tarjeta amarilla */
+  --sky:#9FD9E2;       /* placeholders de foto */
+  --sky-2:#BFE6EC;
+  --peach:#FCEBBE;
+  --white:#FFFFFF;
+  --line:rgba(8,50,59,.22);
+  --display:"M PLUS Rounded 1c","Arial Rounded MT Bold","Nunito",system-ui,sans-serif;
+  --body:"Nunito Sans","Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --script:"Mr Dafoe","Brush Script MT",cursive;
+  --radius:44px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--cream);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--teal)}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(3rem,9vw,6.4rem)}
+h2{font-size:clamp(2.3rem,5.6vw,4.4rem)}
+h3{font-size:clamp(1.7rem,3.4vw,2.9rem)}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1320px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:clamp(56px,8vw,110px)}
+.band--teal{background:var(--teal)}
+.band--orange{background:var(--orange)}
+.band--ink{background:var(--ink);color:var(--cream)}
+.stack{display:flex;flex-direction:column;gap:20px}
+.lede{font-size:1.2rem;max-width:36em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;font:600 1rem/1 var(--body);padding:17px 26px;border-radius:999px;text-decoration:none;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn--ink{background:var(--ink);color:var(--cream)}
+.btn--white{background:var(--white);color:var(--teal)}
+.btn--orange{background:var(--orange);color:var(--white)}
+.btn--ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.eyebrow{font:700 .78rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.new{display:inline-block;background:var(--orange);color:var(--white);font:700 .7rem/1 var(--body);letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border-radius:999px;vertical-align:middle}
+.new--ink{background:var(--ink);color:var(--cream)}
+
+/* Prototype notice */
+.proto{background:var(--ink);color:var(--peach);font-size:.85rem}
+.proto .wrap{padding-block:9px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.proto strong{color:var(--white)}
+
+/* Header */
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--teal)}
+.site-head .wrap{display:flex;align-items:center;gap:20px;padding-block:14px}
+.logo{display:block;width:118px;flex:none;text-decoration:none}
+.logo svg{display:block;width:100%;height:auto}
+.nav{display:flex;gap:30px;margin:0 auto;font-weight:700;font-size:1.02rem;min-width:0}
+.nav a{text-decoration:none;white-space:nowrap;color:var(--ink)}
+.nav a:hover{color:var(--white)}
+.head-cta{flex:none;display:flex;gap:10px}
+@media (max-width:980px){
+  .site-head .wrap{flex-wrap:wrap;row-gap:8px}
+  .head-cta{margin-left:auto}
+  .nav{order:3;width:100%;margin:0;gap:22px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+  .head-cta .btn--ghost-w{display:none}
+}
+.nav .nav-dona{background:var(--orange);color:var(--white);padding:6px 14px;border-radius:999px;margin-block:-6px}
+.nav .nav-dona:hover{background:var(--ink);color:var(--white)}
+.nav a[aria-current="page"]:not(.nav-dona){color:var(--white)}
+.nav .nav-dona[aria-current="page"]{background:var(--ink)}
+
+/* Página Dona aquí */
+.dona-hero{color:var(--white);padding-block:clamp(36px,6vw,72px) clamp(28px,4vw,48px)}
+.dona-hero h1{font-size:clamp(2.8rem,7.5vw,5.6rem)}
+.dona-hero .lede{margin-top:18px;font-size:1.25rem}
+.dona-plans{padding-block:0 clamp(48px,6vw,80px)}
+.dona-plans .plans{margin-top:0}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:36px;list-style:none;padding:0}
+.steps li{background:var(--white);border-radius:30px;padding:26px;display:flex;flex-direction:column;gap:10px}
+.steps .n{width:44px;height:44px;border-radius:50%;background:var(--orange);color:var(--white);display:grid;place-items:center;font:800 1.2rem/1 var(--display)}
+.steps b{font:800 1.3rem/1.2 var(--display)}
+@media (max-width:820px){.steps{grid-template-columns:1fr}}
+.faq{display:grid;gap:12px;margin-top:32px;max-width:860px}
+.faq details{background:var(--white);border-radius:22px;padding:18px 22px}
+.faq summary{cursor:pointer;font:800 1.15rem/1.3 var(--display);list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--orange)}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin-top:10px;max-width:60ch}
+.once-band{background:var(--sun)}
+.once-band .once{margin-top:0}
+.teaser{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px}
+.teaser .lede{color:var(--ink)}
+
+/* Hero */
+.hero{color:var(--white);padding-block:clamp(36px,6vw,70px) clamp(40px,6vw,80px)}
+.hero h1{color:var(--white)}
+.hero .sub{font-size:1.5rem;margin-top:18px}
+.hero-photo{margin-top:clamp(28px,5vw,56px)}
+.photo{position:relative;background:linear-gradient(135deg,var(--sky-2),var(--sky));border-radius:var(--radius);display:flex;align-items:flex-end;padding:22px;color:var(--ink);overflow:hidden;max-width:100%}
+.photo span{background:rgba(255,255,255,.75);padding:6px 12px;border-radius:999px;font-size:.82rem;font-weight:600}
+.photo::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.18) 0 14px,transparent 14px 28px)}
+.photo span{position:relative}
+.hero-photo .photo{aspect-ratio:16/8}
+@media (max-width:640px){.hero-photo .photo{aspect-ratio:4/3}}
+
+/* Quiénes somos + pilares */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);align-items:start}
+.about-left{position:sticky;top:120px;display:flex;flex-direction:column;gap:24px;min-width:0}
+.about-left .big-logo{width:min(330px,80%)}
+.pillars{display:flex;flex-direction:column;gap:22px;min-width:0}
+.pillar{position:sticky;top:120px;border-radius:var(--radius);padding:clamp(28px,3.4vw,44px);min-height:330px;display:flex;flex-direction:column;gap:22px}
+.pillar p{max-width:32em;font-size:1rem}
+.pillar strong{font-weight:700}
+.pillar:nth-child(1){background:var(--sun)}
+.pillar:nth-child(2){background:var(--teal);top:140px}
+.pillar:nth-child(3){background:var(--orange);top:160px}
+.pillar:nth-child(4){background:var(--sun);top:180px}
+@media (max-width:820px){.about{grid-template-columns:1fr}.about-left,.pillar{position:static}.pillar{min-height:0}}
+
+/* Historia */
+.history{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(28px,4vw,64px)}
+.history .text{display:flex;flex-direction:column;gap:18px;max-width:36em}
+.timeline{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;border-left:3px solid var(--ink)}
+.timeline li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;padding:12px 0 12px 20px;position:relative}
+.timeline li::before{content:"";position:absolute;left:-9px;top:20px;width:15px;height:15px;border-radius:50%;background:var(--orange);border:3px solid var(--cream)}
+.timeline .yr{font:800 1.05rem/1.4 var(--display);font-variant-numeric:tabular-nums}
+.timeline b{display:block}
+.timeline span{font-size:.95rem}
+@media (max-width:820px){.history{grid-template-columns:1fr}}
+
+/* Hazte socio */
+.socio-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:end;color:var(--ink)}
+.socio-head p{max-width:34em}
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:40px}
+.plan{background:var(--cream);border-radius:34px;padding:30px;display:flex;flex-direction:column;gap:18px;color:var(--ink)}
+.plan--feat{background:var(--ink);color:var(--cream);transform:translateY(-12px)}
+.plan .name{font:800 1.5rem/1.1 var(--display)}
+.plan .price{font:800 2.8rem/1 var(--display);font-variant-numeric:tabular-nums}
+.plan .price small{font:600 1rem/1 var(--body)}
+.plan ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:.98rem}
+.plan .btn{margin-top:auto}
+.plan--feat .btn{background:var(--orange);color:var(--white)}
+.tag{align-self:flex-start;background:var(--sun);color:var(--ink);font:700 .75rem/1 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:7px 12px;border-radius:999px}
+.pay-note{margin-top:8px;font-size:.88rem;min-height:1.4em}
+.once{margin-top:36px;display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;color:var(--ink)}
+.once .links{display:flex;flex-wrap:wrap;gap:10px}
+@media (max-width:900px){.plans{grid-template-columns:1fr}.plan--feat{transform:none}}
+
+/* Transparencia */
+.transp{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,4vw,60px);align-items:start}
+.report{background:var(--white);border-radius:34px;padding:clamp(24px,3vw,38px);box-shadow:0 18px 40px -26px rgba(8,50,59,.45);display:flex;flex-direction:column;gap:22px}
+.report-top{display:flex;justify-content:space-between;align-items:start;gap:14px;flex-wrap:wrap}
+.report-top h3{font-size:1.9rem}
+.stamp{border:2px dashed var(--orange);color:var(--orange);font:700 .72rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;padding:8px 10px;border-radius:10px}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.kpi{background:var(--cream);border-radius:20px;padding:16px}
+.kpi b{display:block;font:800 1.6rem/1.1 var(--display);font-variant-numeric:tabular-nums}
+.kpi span{font-size:.82rem}
+.bar{display:flex;height:22px;border-radius:999px;overflow:hidden}
+.bar i{display:block}
+.legend{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.legend li{display:grid;grid-template-columns:14px minmax(0,1fr) auto;gap:10px;align-items:center;font-size:.95rem}
+.legend .dot{width:14px;height:14px;border-radius:4px}
+.legend .v{font-variant-numeric:tabular-nums;font-weight:700}
+.story{background:var(--peach);border-radius:20px;padding:16px 18px;font-size:.95rem}
+.archive{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.archive li{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.archive em{font-style:normal;font-size:.85rem;opacity:.7}
+.rte{background:var(--sky-2);border-radius:24px;padding:20px 22px;font-size:.98rem}
+@media (max-width:900px){.transp{grid-template-columns:1fr}}
+@media (max-width:480px){.kpis{grid-template-columns:1fr}}
+
+/* Proyectos */
+.projects{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:40px}
+.proj{display:flex;flex-direction:column;gap:12px}
+.proj .photo{aspect-ratio:4/3;border-radius:28px;padding:14px}
+.proj h4{font:800 1.2rem/1.2 var(--display);margin:0}
+.proj p{font-size:.92rem}
+.proj:nth-child(4n+2) .photo{background:linear-gradient(135deg,var(--peach),var(--sun))}
+.proj:nth-child(4n+3) .photo{background:linear-gradient(135deg,#ffc39e,var(--orange))}
+.proj:nth-child(4n+4) .photo{background:linear-gradient(135deg,var(--sky-2),var(--teal))}
+@media (max-width:980px){.projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.projects{grid-template-columns:1fr}}
+
+/* Impacto */
+.impact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,60px);align-items:end}
+.impact .text{display:flex;flex-direction:column;gap:22px;align-items:flex-start}
+.nums{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}
+.nums b{display:block;font:800 clamp(2.8rem,5vw,4.2rem)/1 var(--display);font-variant-numeric:tabular-nums}
+.nums span{font-size:1.02rem;font-weight:600}
+@media (max-width:820px){.impact{grid-template-columns:1fr}}
+
+/* Empresas */
+.biz{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,60px);align-items:start}
+.biz h2{color:var(--sun)}
+.biz .text{display:flex;flex-direction:column;gap:18px;max-width:36em}
+.calc{background:rgba(246,244,231,.07);border:1px solid rgba(246,244,231,.2);border-radius:30px;padding:26px;display:flex;flex-direction:column;gap:16px}
+.calc label{font-weight:600;font-size:.95rem}
+.calc input[type=range]{width:100%;accent-color:var(--orange)}
+.calc table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.calc td{padding:10px 0;border-bottom:1px solid rgba(246,244,231,.18)}
+.calc td:last-child{text-align:right;font-weight:700}
+.calc tr.total td{border-bottom:0;color:var(--sun);font-size:1.15rem}
+.fine{font-size:.82rem;opacity:.8}
+.checks{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+@media (max-width:900px){.biz{grid-template-columns:1fr}}
+
+/* Eventos */
+.events{border-top:2px solid var(--ink);margin-top:34px}
+.event{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:22px 4px;border-bottom:2px solid var(--ink)}
+.event small{display:block;font-size:.95rem}
+.event b{font:800 1.4rem/1.2 var(--display)}
+
+/* Formularios */
+.forms{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,56px);align-items:start}
+.form-card{display:flex;flex-direction:column;gap:18px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{font-size:.95rem}
+.field input,.field select,.field textarea{font:inherit;font-size:1rem;color:var(--ink);background:transparent;border:1px solid var(--ink);border-radius:2px;padding:10px 12px;width:100%}
+.field textarea{min-height:110px;resize:vertical}
+.consent{display:grid;grid-template-columns:20px minmax(0,1fr);gap:10px;font-size:.85rem;align-items:start}
+.consent input{margin-top:3px;accent-color:var(--teal)}
+.form-msg{font-size:.92rem;font-weight:600;min-height:1.4em;color:var(--teal)}
+.forms .btn--teal{background:var(--teal);color:var(--white);width:100%}
+@media (max-width:900px){.forms{grid-template-columns:1fr}}
+@media (max-width:520px){.grid2{grid-template-columns:1fr}}
+
+/* Footer */
+footer{background:var(--teal);color:var(--ink)}
+.foot{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;padding-block:56px 40px;font-size:.98rem}
+.foot ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.foot a{text-decoration:underline;text-underline-offset:3px}
+.foot .logo{width:150px}
+.foot-bottom{border-top:1px solid rgba(8,50,59,.25);padding-block:18px;font-size:.85rem}
+@media (max-width:900px){.foot{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.foot{grid-template-columns:1fr}}
+.section-head{display:flex;flex-direction:column;gap:16px}
+section[id],form[id]{scroll-margin-top:140px}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="cokua-logo" viewBox="0 0 240 200">
+      <path id="arc" d="M30,118 A86,86 0 0 1 190,70" fill="none"/>
+      <text font-family="Nunito Sans, sans-serif" font-weight="700" font-size="17" letter-spacing="3.5" fill="#08323B"><textPath href="#arc">FUNDACIÓN SOMOS</textPath></text>
+      <g transform="rotate(-28 160 110)">
+        <rect x="118" y="96" width="78" height="34" rx="6" fill="#fff" stroke="#08323B" stroke-width="5"/>
+        <rect x="84" y="103" width="38" height="20" rx="4" fill="#fff" stroke="#08323B" stroke-width="5"/>
+        <ellipse cx="198" cy="113" rx="10" ry="21" fill="#6BA6D9" stroke="#08323B" stroke-width="5"/>
+      </g>
+      <text x="30" y="178" font-family="Mr Dafoe, cursive" font-size="82" fill="#08323B">Cokua</text>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="proto" role="note">
+  <div class="wrap"><strong>Prototipo de rediseño.</strong> Fotos, enlaces de pago y cifras del informe mensual son de ejemplo. El logo es una recreación provisional.</div>
+</div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Fundación Somos Cokua, inicio"><svg viewBox="0 0 240 200" role="img"><use href="#cokua-logo"/></svg></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#inicio" data-view-link="home">Inicio</a>
+      <a href="#quienes" data-view-link="home">Quiénes somos</a>
+      <a href="#proyectos" data-view-link="home">Nuestros proyectos</a>
+      <a href="#transparencia" data-view-link="home">Transparencia</a>
+      <a href="#empresas" data-view-link="home">Empresas</a>
+      <a href="#contacto" data-view-link="home">Contáctanos</a>
+      <a href="#dona" class="nav-dona" data-view-link="dona">Dona aquí</a>
+    </nav>
+    <div class="head-cta">
+      <a class="btn btn--white" href="#dona">Dona aquí</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div id="view-home">
+  <section id="inicio" class="band--teal hero">
+    <div class="wrap">
+      <h1>Nunca dejes de soñar</h1>
+      <p class="sub">Fundación Somos Cokua</p>
+      <div class="hero-photo"><div class="photo"><span>Foto grupal de voluntarios (se reutiliza la de la web actual)</span></div></div>
+    </div>
+  </section>
+
+  <section id="quienes" class="band">
+    <div class="wrap about">
+      <div class="about-left">
+        <h2>Quiénes somos</h2>
+        <p class="lede">Somos una fundación construida por personas que creen en la posibilidad de encontrarse con el otro, descubrir nuevas realidades y hacer algo concreto frente a ellas. Algunos llegamos buscando una manera de ayudar; otros ya traíamos el trabajo social como parte de nuestra historia. Nos une pensar en que la transformación empieza cuando dejamos de mirar las desigualdades desde lejos y decidimos involucrarnos.</p>
+        <svg class="big-logo" viewBox="0 0 240 200" role="img" aria-label="Logo Fundación Somos Cokua"><use href="#cokua-logo"/></svg>
+      </div>
+      <div class="pillars">
+        <article class="pillar">
+          <h3>Labor social y comunidad</h3>
+          <p><strong>El corazón de lo que hacemos:</strong> trabajamos codo a codo con las comunidades, nunca desde afuera, para reconstruir el tejido social y llevar oportunidades a quienes más lo necesitan. Desde jornadas comunitarias hasta iniciativas como Cokua a la Calle, acompañamos procesos que las personas mismas protagonizan.</p>
+        </article>
+        <article class="pillar">
+          <h3>Educación y tecnología</h3>
+          <p><strong>Aprender abre caminos:</strong> creemos que la educación también empieza por los espacios donde ocurre. Recuperamos y adecuamos escuelas rurales, y acercamos conocimiento y herramientas, incluida la tecnología, para que más personas puedan aprender, crear y desarrollar su potencial.</p>
+        </article>
+        <article class="pillar">
+          <h3>Recreación, deporte y salud</h3>
+          <p><strong>El bienestar también es dignidad:</strong> llevamos cine, juego y encuentro a las comunidades con Cine al Barrio, construimos espacios deportivos que fortalecen los vínculos entre vecinos y promovemos la salud a través de jornadas de atención y cuidado. Porque una vida digna también se vive, se disfruta y se comparte.</p>
+        </article>
+        <article class="pillar">
+          <h3>Medio ambiente</h3>
+          <p><strong>Cuidar el territorio es cuidarnos:</strong> a través de nuestras caminatas ecológicas, la moda circular de El Ropero y prácticas sostenibles, promovemos una relación más consciente con la naturaleza que habitamos. Conocer nuestros ecosistemas también es una forma de aprender a protegerlos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="historia" class="band" style="padding-top:0">
+    <div class="wrap history">
+      <div class="text">
+        <h2>Más de una década caminando junto a las comunidades</h2>
+        <p>Todo comenzó en 2015 con una Navidad: un grupo de amigos celebró junto a 80 niños de la vereda La Miel, en Caldas, Antioquia. Ese día nació el deseo de servir y de mirar más allá de lo evidente. Con los años, esa chispa se convirtió en jornadas comunitarias, movilizaciones sociales y, en 2019, en el nacimiento de Cokua.</p>
+        <p>Desde entonces no hemos dejado de crecer: transformamos escuelas rurales, creamos El Ropero como apuesta de economía circular, nos constituimos legalmente como Fundación y llegamos a nuevos territorios como el Chocó. Hoy somos una red de voluntarios que sigue convencida de que nadie transforma una comunidad desde afuera y que nadie cambia el mundo solo.</p>
+        <div><a class="btn btn--ink" href="#proyectos">Conoce nuestros proyectos</a></div>
+      </div>
+      <ol class="timeline" aria-label="Nuestra historia">
+        <li><span class="yr">2015</span><div><b>Todo comenzó con una Navidad</b><span>80 niños de la vereda La Miel, Caldas.</span></div></li>
+        <li><span class="yr">2016–17</span><div><b>Crecemos con la comunidad</b><span>Primeras jornadas comunitarias e intervenciones de arte en zonas rurales.</span></div></li>
+        <li><span class="yr">2018</span><div><b>Primera gran movilización</b><span>Abraza un Venezolano: 250 migrantes atendidos.</span></div></li>
+        <li><span class="yr">2019</span><div><b>Nace Cokua</b><span>Iniciamos con 40 voluntarios.</span></div></li>
+        <li><span class="yr">2020</span><div><b>La solidaridad no se detiene</b><span>Ayudas en pandemia y nace Cokua en Letras.</span></div></li>
+        <li><span class="yr">2021–22</span><div><b>Transformamos escuelas</b><span>Escuelas rurales adecuadas y nace El Ropero Cokua.</span></div></li>
+        <li><span class="yr">2023</span><div><b>Un nuevo capítulo</b><span>Constitución legal como Fundación y primer voluntariado en el Chocó.</span></div></li>
+        <li><span class="yr">2024</span><div><b>Construimos oportunidades</b><span>Entrega de una cancha deportiva comunitaria.</span></div></li>
+        <li><span class="yr">2025</span><div><b>Formamos voluntarios</b><span>Nace la Escuela de Voluntarios Somos Cokua.</span></div></li>
+        <li><span class="yr">2026</span><div><b>Llegamos a nuevos territorios</b><span>Cokua a la Calle: jornadas con habitantes de calle.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="socio" class="band band--teal">
+    <div class="wrap teaser">
+      <div class="section-head">
+        <span class="new new--ink" style="align-self:flex-start">Nuevo</span>
+        <h2>Hazte donador mensual</h2>
+        <p class="lede">Desde $10.000 al mes, y cada mes te contamos en qué se usó tu aporte.</p>
+      </div>
+      <a class="btn btn--white" href="#dona">Ver planes y donar</a>
+    </div>
+  </section>
+
+  <section id="transparencia" class="band">
+    <div class="wrap transp">
+      <div class="stack">
+        <span class="new">Nuevo</span>
+        <h2>Así usamos tu aporte</h2>
+        <p class="lede">Cada mes publicamos un informe de una página con lo que recibimos de nuestros socios, en qué lo invertimos y a quién llegó.</p>
+        <div class="rte">Somos una Entidad Sin Ánimo de Lucro perteneciente al Régimen Tributario Especial. Tu donación puede tener beneficios tributarios conforme a la normativa vigente en Colombia. <a href="#certificado">Solicita tu certificado de donación</a>.</div>
+        <div>
+          <p class="eyebrow" style="margin-bottom:8px">Informes anteriores</p>
+          <ul class="archive">
+            <li><span>Septiembre 2026</span><em>Disponible al lanzar</em></li>
+            <li><span>Agosto 2026</span><em>Disponible al lanzar</em></li>
+            <li><span>Documentos de constitución legal</span><em>Enlace de la web actual</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <article class="report" aria-label="Ejemplo de informe mensual">
+        <div class="report-top">
+          <div>
+            <p class="eyebrow">Informe a socios</p>
+            <h3>Octubre 2026</h3>
+          </div>
+          <span class="stamp">Datos de ejemplo</span>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><b>$3.200.000</b><span>recibido de socios</span></div>
+          <div class="kpi"><b>160</b><span>socios activos</span></div>
+          <div class="kpi"><b>412</b><span>personas alcanzadas</span></div>
+        </div>
+        <div>
+          <div class="bar" role="img" aria-label="Distribución: escuelas rurales 38%, labor social 27%, recreación 15%, medio ambiente 8%, operación 12%">
+            <i style="width:38%;background:var(--teal)"></i>
+            <i style="width:27%;background:var(--orange)"></i>
+            <i style="width:15%;background:var(--sun)"></i>
+            <i style="width:8%;background:var(--sky)"></i>
+            <i style="width:12%;background:var(--ink)"></i>
+          </div>
+        </div>
+        <ul class="legend">
+          <li><i class="dot" style="background:var(--teal)"></i><span>Educación: escuela rural (ejemplo)</span><span class="v">$1.216.000</span></li>
+          <li><i class="dot" style="background:var(--orange)"></i><span>Labor social: Cokua a la Calle</span><span class="v">$864.000</span></li>
+          <li><i class="dot" style="background:var(--sun)"></i><span>Recreación: Cine al Barrio</span><span class="v">$480.000</span></li>
+          <li><i class="dot" style="background:var(--sky)"></i><span>Medio ambiente: caminata ecológica</span><span class="v">$256.000</span></li>
+          <li><i class="dot" style="background:var(--ink)"></i><span>Operación y logística</span><span class="v">$384.000</span></li>
+        </ul>
+        <p class="story"><b>La historia del mes.</b> Aquí va un párrafo corto y una foto de una actividad concreta: qué se hizo, dónde y qué cambió para la comunidad.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="proyectos" class="band" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Nuestros proyectos</h2>
+        <p class="lede">Transformamos realidades caminando junto a las comunidades.</p>
+      </div>
+      <div class="projects">
+        <article class="proj"><div class="photo"><span>Foto</span></div><h4>El Ropero de Cokua</h4><p>Moda circular con propósito social.</p></article>
+        <article class="proj"><div class="photo"><span>Foto</span></div><h4>Ayuda por el terremoto en Chocó</h4><p>Atención a familias afectadas.</p></article>
+        <article class="proj"><div class="photo"><span>Foto</span></div><h4>Voluntariado en Chocó</h4><p>Jornadas en nuevos territorios.</p></article>
+        <article class="proj"><div class="photo"><span>Foto</span></div><h4>Senderismo y caminatas ecológicas</h4><p>Conocer el territorio para cuidarlo.</p></article>
+        <article class="proj"><div class="photo"><span>Foto</span></div><h4>Escuelas rurales</h4><p>Mejoramiento de infraestructura educativa.</p></article>
+        <article class="proj"><div class="photo"><span>Foto</span></div><h4>Navidades Cokua</h4><p>La tradición con la que todo empezó.</p></article>
+        <article class="proj"><div class="photo"><span>Foto</span></div><h4>Cine al Barrio</h4><p>Cine, juego y encuentro en las comunidades.</p></article>
+        <article class="proj"><div class="photo"><span>Foto</span></div><h4>Bazar de Cokua</h4><p>Encuentros solidarios para recaudar fondos.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--orange">
+    <div class="wrap impact">
+      <div class="text">
+        <h2>Transformamos vidas</h2>
+        <p class="lede">Generamos espacios y proyectos sociales basados en la diversidad, la inclusión y estrategias que impulsan nuestro objeto social. Nos sostiene un equipo humano comprometido y solidario, dispuesto a trabajar por la comunidad y a transformar vidas.</p>
+        <a class="btn btn--ink" href="#dona">Hazte socio</a>
+      </div>
+      <div class="nums">
+        <div><b>10</b><span>años haciendo labor social</span></div>
+        <div><b>5.000+</b><span>personas impactadas</span></div>
+        <div><b>250+</b><span>voluntarios involucrados</span></div>
+        <div><b>25+</b><span>comunidades intervenidas</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="empresas" class="band band--ink">
+    <div class="wrap biz">
+      <div class="text">
+        <span class="new" style="align-self:flex-start">Nuevo</span>
+        <h2>Empresas aliadas</h2>
+        <p class="lede">Las donaciones de empresas y personas declarantes a entidades del Régimen Tributario Especial dan derecho a un descuento en el impuesto de renta equivalente al 25% del valor donado (artículo 257 del Estatuto Tributario).</p>
+        <ul class="checks">
+          <li>Certificado de donación firmado para cada aporte.</li>
+          <li>Informe mensual de impacto, útil para tu reporte de sostenibilidad.</li>
+          <li>Aporte por transferencia, con acuerdo de vinculación sencillo.</li>
+        </ul>
+        <div><a class="btn btn--orange" href="#contacto">Quiero vincular mi empresa</a></div>
+      </div>
+      <div class="calc">
+        <label for="aporte">Aporte mensual de tu empresa: <b id="aporte-label">$2.000.000</b></label>
+        <input id="aporte" type="range" min="500000" max="10000000" step="250000" value="2000000">
+        <table>
+          <tr><td>Aporte en el año</td><td id="c-anual">$24.000.000</td></tr>
+          <tr><td>Descuento potencial en renta (25%)</td><td id="c-desc">$6.000.000</td></tr>
+          <tr class="total"><td>Costo neto para la empresa</td><td id="c-neto">$18.000.000</td></tr>
+        </table>
+        <p class="fine">Cálculo ilustrativo. El descuento, sumado a otros descuentos de los artículos 255 y 256, no puede superar el 25% del impuesto de renta a cargo; el excedente puede tomarse el año siguiente. Consulta con tu contador.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="eventos" class="band band--teal">
+    <div class="wrap">
+      <h2>Próximos eventos</h2>
+      <p class="lede" style="margin-top:12px">Marca tu calendario</p>
+      <div class="events">
+        <div class="event">
+          <div><small>Diciembre 2026 · fecha por confirmar</small><b>Navidades Cokua 2026</b> <span>/ Caldas, Antioquia</span></div>
+          <a class="btn btn--ink" href="#contacto">Quiero participar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="band">
+    <div class="wrap forms">
+      <form class="form-card" id="form-vol" novalidate>
+        <h2>Ser voluntario</h2>
+        <p>¡Escríbenos para sumarte a nuestra causa!</p>
+        <div class="grid2">
+          <div class="field"><label for="v-nombre">Nombre *</label><input id="v-nombre" required></div>
+          <div class="field"><label for="v-apellidos">Apellidos *</label><input id="v-apellidos" required></div>
+          <div class="field full"><label for="v-org">Organización o empresa</label><input id="v-org"></div>
+          <div class="field"><label for="v-correo">Correo electrónico *</label><input id="v-correo" type="email" required></div>
+          <div class="field"><label for="v-asunto">Asunto</label>
+            <select id="v-asunto"><option>Quiero ser voluntario</option><option>Vincular mi empresa</option><option>Información general</option></select></div>
+          <div class="field full"><label for="v-msg">Mensaje</label><textarea id="v-msg"></textarea></div>
+        </div>
+        <label class="consent"><input type="checkbox" id="v-ok" required><span>Autorizo a la Fundación Somos Cokua a tratar mis datos personales para responder esta solicitud, según su Política de Tratamiento de Datos (Ley 1581 de 2012).</span></label>
+        <button class="btn btn--teal" type="submit">Enviar</button>
+        <p class="form-msg" aria-live="polite"></p>
+      </form>
+
+      <form class="form-card" id="certificado" novalidate>
+        <span class="new" style="align-self:flex-start">Nuevo</span>
+        <h2>Certificado de donación</h2>
+        <p>Si donaste a la fundación, solicita aquí tu certificado para la declaración de renta.</p>
+        <div class="grid2">
+          <div class="field full"><label for="c-nombre">Nombre o razón social *</label><input id="c-nombre" required></div>
+          <div class="field"><label for="c-tipo">Tipo de documento *</label>
+            <select id="c-tipo"><option>Cédula de ciudadanía</option><option>NIT</option><option>Cédula de extranjería</option></select></div>
+          <div class="field"><label for="c-num">Número *</label><input id="c-num" inputmode="numeric" required></div>
+          <div class="field"><label for="c-valor">Valor donado (COP) *</label><input id="c-valor" inputmode="numeric" required></div>
+          <div class="field"><label for="c-fecha">Fecha de la donación *</label><input id="c-fecha" type="date" required></div>
+          <div class="field"><label for="c-medio">Medio de pago</label>
+            <select id="c-medio"><option>Tarjeta (Wompi)</option><option>PayPal</option><option>Transferencia Bancolombia</option><option>Suscripción mensual</option></select></div>
+          <div class="field"><label for="c-correo">Correo para enviarlo *</label><input id="c-correo" type="email" required></div>
+        </div>
+        <label class="consent"><input type="checkbox" id="c-ok" required><span>Autorizo el tratamiento de mis datos personales para la expedición del certificado de donación (Ley 1581 de 2012).</span></label>
+        <button class="btn btn--teal" type="submit">Solicitar certificado</button>
+        <p class="form-msg" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+  </div>
+
+  <div id="view-dona" hidden>
+    <section class="band--teal dona-hero">
+      <div class="wrap">
+        <p class="eyebrow" style="margin-bottom:14px">Dona aquí</p>
+        <h1>Hazte donador mensual</h1>
+        <p class="lede">Un aporte pequeño y constante nos permite planear con tiempo en lugar de empezar de cero cada mes. A cambio, cada mes te contamos en qué se usó el dinero, con cifras y una historia de la comunidad.</p>
+      </div>
+    </section>
+    <section class="band--teal dona-plans">
+      <div class="wrap">
+
+      <div class="plans">
+        <article class="plan">
+          <span class="name">Amigo Cokua</span>
+          <span class="price">$10.000 <small>COP / mes</small></span>
+          <ul>
+            <li>Informe mensual de uso de fondos</li>
+            <li>Invitación a jornadas abiertas</li>
+          </ul>
+          <a class="btn btn--ink" href="#dona" data-plan="Amigo Cokua">Quiero ser Amigo</a>
+        </article>
+        <article class="plan plan--feat">
+          <span class="tag">El más elegido</span>
+          <span class="name">Aliado Cokua</span>
+          <span class="price">$20.000 <small>COP / mes</small></span>
+          <ul>
+            <li>Informe mensual de uso de fondos</li>
+            <li>Invitación a jornadas abiertas</li>
+            <li>Certificado de donación anual para tu declaración de renta</li>
+          </ul>
+          <a class="btn" href="#dona" data-plan="Aliado Cokua">Quiero ser Aliado</a>
+        </article>
+        <article class="plan">
+          <span class="name">Padrino Cokua</span>
+          <span class="price">$50.000 <small>COP / mes</small></span>
+          <ul>
+            <li>Todo lo del plan Aliado</li>
+            <li>Visita guiada a un proyecto al año</li>
+            <li>Tu nombre en el muro de padrinos (si lo autorizas)</li>
+          </ul>
+          <a class="btn btn--ink" href="#dona" data-plan="Padrino Cokua">Quiero ser Padrino</a>
+        </article>
+      </div>
+      <p class="pay-note" id="pay-note" aria-live="polite">Cobro mensual automático con tarjeta débito o crédito. Puedes cancelar cuando quieras.</p>
+
+            </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <h2>Cómo funciona</h2>
+        <ol class="steps">
+          <li><span class="n">1</span><b>Eliges tu plan</b><span>Amigo, Aliado o Padrino, según lo que puedas aportar cada mes.</span></li>
+          <li><span class="n">2</span><b>Registras tu tarjeta</b><span>El cobro se hace automáticamente cada mes en la pasarela de pagos de la fundación.</span></li>
+          <li><span class="n">3</span><b>Recibes tu informe</b><span>A comienzos de cada mes te llega por correo en qué se invirtió lo recaudado.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="band--teal once-band">
+      <div class="wrap" style="padding-block:40px">
+<div class="once">
+        <span><b>¿Prefieres donar una sola vez?</b> Usa nuestros canales oficiales:</span>
+        <div class="links">
+          <a class="btn btn--white" href="https://checkout.wompi.co/l/VPOS_bWvkEp" target="_blank" rel="noopener">Donar con tarjeta</a>
+          <a class="btn btn--orange" href="https://www.paypal.com/ncp/payment/QWUVJYZ5S98UA" target="_blank" rel="noopener">Donar con PayPal</a>
+          <a class="btn btn--ink" href="#certificado">Transferencia Bancolombia</a>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <h2>Preguntas frecuentes</h2>
+        <div class="faq">
+          <details><summary>¿Puedo cancelar o cambiar mi plan?</summary><p>Sí, cuando quieras. Escríbenos o usa el enlace de gestión que llega con tu primer cobro, y el siguiente mes ya no se te cobra.</p></details>
+          <details><summary>¿Recibo certificado para mi declaración de renta?</summary><p>Sí. Somos Entidad Sin Ánimo de Lucro del Régimen Tributario Especial. Puedes <a href="#certificado">solicitar tu certificado de donación</a> en cualquier momento.</p></details>
+          <details><summary>¿Con qué medios puedo pagar la donación mensual?</summary><p>Con tarjeta débito o crédito, porque el cobro automático solo funciona con tarjeta. Si prefieres PSE o transferencia, puedes hacer donaciones únicas cuando quieras.</p></details>
+          <details><summary>¿Cómo sé que mi aporte se usa bien?</summary><p>Publicamos cada mes un informe de una página con lo recibido y en qué se invirtió. Puedes ver el ejemplo en <a href="#transparencia">Transparencia</a>.</p></details>
+          <details><summary>Soy una empresa, ¿cómo puedo aportar?</summary><p>Tenemos un esquema para empresas aliadas por transferencia, con certificado y reporte de impacto. Mira la sección <a href="#empresas">Empresas</a>.</p></details>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><a class="logo" href="#inicio" aria-label="Inicio"><svg viewBox="0 0 240 200" role="img"><use href="#cokua-logo"/></svg></a></div>
+    <div>
+      <b>Fundación Somos Cokua</b><br>
+      Calle 140 Sur 49 31<br>
+      Caldas, Antioquia, Colombia<br>
+      cokua.oficial@gmail.com<br>
+      © 2026 Fundación Somos Cokua
+    </div>
+    <ul>
+      <li><a href="#dona">Donar ahora</a></li>
+      <li><a href="#transparencia">Transparencia e informes</a></li>
+      <li><a href="#transparencia">Documentos de constitución legal</a></li>
+      <li><a href="#contacto">Política de tratamiento de datos</a></li>
+      <li><a href="#quienes">Preguntas frecuentes</a></li>
+    </ul>
+    <ul>
+      <li><a href="https://www.instagram.com/somos_cokua" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.facebook.com/share/1cdtfZbMBX/" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="#inicio">TikTok</a></li>
+    </ul>
+  </div>
+  <div class="wrap foot-bottom">Entidad Sin Ánimo de Lucro del Régimen Tributario Especial.</div>
+</footer>
+
+<script>
+(function(){
+
+  var home = document.getElementById('view-home'), dona = document.getElementById('view-dona');
+  function route(){
+    var h = location.hash.slice(1), isDona = h === 'dona';
+    home.hidden = isDona; dona.hidden = !isDona;
+    document.querySelectorAll('[data-view-link]').forEach(function(a){
+      var on = isDona ? a.dataset.viewLink === 'dona' : (a.getAttribute('href') === '#' + (h || 'inicio'));
+      if (on) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+    });
+    if (isDona) { window.scrollTo(0,0); return; }
+    var el = h && document.getElementById(h);
+    if (el) el.scrollIntoView(); else if (!h) window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange', route); route();
+
+  var fmt = function(n){ return '$' + Math.round(n).toLocaleString('es-CO'); };
+  var r = document.getElementById('aporte');
+  function calc(){
+    var m = +r.value, a = m*12, d = a*0.25;
+    document.getElementById('aporte-label').textContent = fmt(m);
+    document.getElementById('c-anual').textContent = fmt(a);
+    document.getElementById('c-desc').textContent = fmt(d);
+    document.getElementById('c-neto').textContent = fmt(a-d);
+  }
+  r.addEventListener('input', calc); calc();
+
+  var note = document.getElementById('pay-note');
+  document.querySelectorAll('[data-plan]').forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      note.textContent = 'Prototipo: aquí se abrirá el pago mensual del plan ' + b.dataset.plan + ' cuando la fundación cree el enlace en su pasarela.';
+    });
+  });
+
+  ['form-vol','certificado'].forEach(function(id){
+    var f = document.getElementById(id);
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      var msg = f.querySelector('.form-msg');
+      var missing = Array.prototype.filter.call(f.querySelectorAll('[required]'), function(i){
+        return i.type === 'checkbox' ? !i.checked : !i.value.trim();
+      });
+      if (missing.length){ msg.textContent = 'Completa los campos marcados con * y la autorización de datos.'; missing[0].focus(); return; }
+      msg.textContent = 'Prototipo: en la versión final esta solicitud llegará al correo de la fundación.';
+    });
+  });
+})();
+</script>

@@ -1,0 +1,37 @@
+---
+import t from '../../content/textos.json';
+import pagos from '../../config/pagos.json';
+const u = t.dona.unaVez;
+const tr = pagos.transferencia;
+const hayDatos = Boolean(tr.banco && tr.tipoCuenta && tr.numeroCuenta && tr.titular);
+---
+<section class="band--teal once-band">
+  <div class="wrap" style="padding-block:40px">
+    <div class="once">
+      <span><b>{u.pregunta}</b> {u.texto}</span>
+      <div class="links">
+        <a class="btn btn--white" href={pagos.donacionUnica.wompi} target="_blank" rel="noopener">{u.tarjeta}</a>
+        <a class="btn btn--orange" href={pagos.donacionUnica.paypal} target="_blank" rel="noopener">{u.paypal}</a>
+        <button class="btn btn--ink" type="button" id="btn-transfer" aria-expanded="false" aria-controls="transfer-info">{u.transferencia}</button>
+      </div>
+    </div>
+    <div class="transfer" id="transfer-info" hidden aria-live="polite">
+      {hayDatos ? (
+        <>
+          <dl>
+            <dt>Banco</dt><dd>{tr.banco}</dd>
+            <dt>Tipo de cuenta</dt><dd>{tr.tipoCuenta}</dd>
+            <dt>Número</dt><dd>{tr.numeroCuenta}</dd>
+            <dt>Titular</dt><dd>{tr.titular}</dd>
+          </dl>
+          {tr.qrImagen && <img src={tr.qrImagen} alt="Código QR para transferencia Bancolombia" width="200" height="200" />}
+        </>
+      ) : (
+        <p>{u.transferenciaSinDatos}</p>
+      )}
+    </div>
+  </div>
+</section>
+<script>
+  import '../../scripts/transferencia.ts';
+</script>

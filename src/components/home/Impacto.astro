@@ -1,0 +1,16 @@
+---
+import t from '../../content/textos.json';
+import cifras from '../../content/impacto.json';
+---
+<section class="band band--orange">
+  <div class="wrap impact">
+    <div class="text">
+      <h2>{t.impacto.titulo}</h2>
+      <p class="lede">{t.impacto.texto}</p>
+      <a class="btn btn--ink" href={t.impacto.boton.href}>{t.impacto.boton.texto}</a>
+    </div>
+    <div class="nums">
+      {cifras.map((c) => <div><b>{c.cifra}</b><span>{c.etiqueta}</span></div>)}
+    </div>
+  </div>
+</section>

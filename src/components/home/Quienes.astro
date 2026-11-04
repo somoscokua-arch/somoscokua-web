@@ -1,0 +1,20 @@
+---
+import t from '../../content/textos.json';
+---
+<section id="quienes" class="band">
+  <div class="wrap about">
+    <div class="about-left">
+      <h2>{t.quienes.titulo}</h2>
+      <p class="lede">{t.quienes.intro}</p>
+      <svg class="big-logo" viewBox="0 0 240 200" role="img" aria-label="Logo Fundación Somos Cokua"><use href="#cokua-logo"/></svg>
+    </div>
+    <div class="pillars">
+      {t.quienes.pilares.map((p) => (
+        <article class="pillar">
+          <h3>{p.titulo}</h3>
+          <p><strong>{p.destacado}</strong> {p.texto}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

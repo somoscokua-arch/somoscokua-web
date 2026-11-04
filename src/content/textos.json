@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "home": {
+      "titulo": "Somos Cokua",
+      "descripcion": "Fundación Somos Cokua: labor social, educación, recreación y medio ambiente junto a las comunidades de Caldas, Antioquia. Entidad sin ánimo de lucro del Régimen Tributario Especial."
+    },
+    "dona": {
+      "titulo": "Dona aquí | Somos Cokua",
+      "descripcion": "Hazte donador mensual de la Fundación Somos Cokua desde $10.000 al mes, o haz una donación única. Cada mes te contamos en qué se usó tu aporte."
+    },
+    "politica": {
+      "titulo": "Política de tratamiento de datos | Somos Cokua",
+      "descripcion": "Política de tratamiento de datos personales de la Fundación Somos Cokua, conforme a la Ley 1581 de 2012."
+    }
+  },
+  "nav": {
+    "enlaces": [
+      { "texto": "Inicio", "href": "/#inicio" },
+      { "texto": "Quiénes somos", "href": "/#quienes" },
+      { "texto": "Nuestros proyectos", "href": "/#proyectos" },
+      { "texto": "Transparencia", "href": "/#transparencia" },
+      { "texto": "Empresas", "href": "/#empresas" },
+      { "texto": "Contáctanos", "href": "/#contacto" }
+    ],
+    "dona": { "texto": "Dona aquí", "href": "/dona" }
+  },
+  "hero": {
+    "titulo": "Nunca dejes de soñar",
+    "subtitulo": "Fundación Somos Cokua",
+    "foto": "Foto grupal de voluntarios (se reutiliza la de la web actual)"
+  },
+  "quienes": {
+    "titulo": "Quiénes somos",
+    "intro": "Somos una fundación construida por personas que creen en la posibilidad de encontrarse con el otro, descubrir nuevas realidades y hacer algo concreto frente a ellas. Algunos llegamos buscando una manera de ayudar; otros ya traíamos el trabajo social como parte de nuestra historia. Nos une pensar en que la transformación empieza cuando dejamos de mirar las desigualdades desde lejos y decidimos involucrarnos.",
+    "pilares": [
+      {
+        "titulo": "Labor social y comunidad",
+        "destacado": "El corazón de lo que hacemos:",
+        "texto": "trabajamos codo a codo con las comunidades, nunca desde afuera, para reconstruir el tejido social y llevar oportunidades a quienes más lo necesitan. Desde jornadas comunitarias hasta iniciativas como Cokua a la Calle, acompañamos procesos que las personas mismas protagonizan."
+      },
+      {
+        "titulo": "Educación y tecnología",
+        "destacado": "Aprender abre caminos:",
+        "texto": "creemos que la educación también empieza por los espacios donde ocurre. Recuperamos y adecuamos escuelas rurales, y acercamos conocimiento y herramientas, incluida la tecnología, para que más personas puedan aprender, crear y desarrollar su potencial."
+      },
+      {
+        "titulo": "Recreación, deporte y salud",
+        "destacado": "El bienestar también es dignidad:",
+        "texto": "llevamos cine, juego y encuentro a las comunidades con Cine al Barrio, construimos espacios deportivos que fortalecen los vínculos entre vecinos y promovemos la salud a través de jornadas de atención y cuidado. Porque una vida digna también se vive, se disfruta y se comparte."
+      },
+      {
+        "titulo": "Medio ambiente",
+        "destacado": "Cuidar el territorio es cuidarnos:",
+        "texto": "a través de nuestras caminatas ecológicas, la moda circular de El Ropero y prácticas sostenibles, promovemos una relación más consciente con la naturaleza que habitamos. Conocer nuestros ecosistemas también es una forma de aprender a protegerlos."
+      }
+    ]
+  },
+  "historia": {
+    "titulo": "Más de una década caminando junto a las comunidades",
+    "parrafos": [
+      "Todo comenzó en 2015 con una Navidad: un grupo de amigos celebró junto a 80 niños de la vereda La Miel, en Caldas, Antioquia. Ese día nació el deseo de servir y de mirar más allá de lo evidente. Con los años, esa chispa se convirtió en jornadas comunitarias, movilizaciones sociales y, en 2019, en el nacimiento de Cokua.",
+      "Desde entonces no hemos dejado de crecer: transformamos escuelas rurales, creamos El Ropero como apuesta de economía circular, nos constituimos legalmente como Fundación y llegamos a nuevos territorios como el Chocó. Hoy somos una red de voluntarios que sigue convencida de que nadie transforma una comunidad desde afuera y que nadie cambia el mundo solo."
+    ],
+    "boton": { "texto": "Conoce nuestros proyectos", "href": "/#proyectos" },
+    "etiquetaLinea": "Nuestra historia"
+  },
+  "teaserSocio": {
+    "etiqueta": "Nuevo",
+    "titulo": "Hazte donador mensual",
+    "texto": "Desde $10.000 al mes, y cada mes te contamos en qué se usó tu aporte.",
+    "boton": { "texto": "Ver planes y donar", "href": "/dona" }
+  },
+  "transparencia": {
+    "etiqueta": "Nuevo",
+    "titulo": "Así usamos tu aporte",
+    "texto": "Cada mes publicamos un informe de una página con lo que recibimos de nuestros socios, en qué lo invertimos y a quién llegó.",
+    "nota": "Somos una Entidad Sin Ánimo de Lucro perteneciente al Régimen Tributario Especial. Tu donación puede tener beneficios tributarios conforme a la normativa vigente en Colombia. <a href=\"/#certificado\">Solicita tu certificado de donación</a>.",
+    "tituloArchivo": "Informes anteriores",
+    "etiquetaInforme": "Informe a socios",
+    "ariaInforme": "Ejemplo de informe mensual"
+  },
+  "proyectos": {
+    "titulo": "Nuestros proyectos",
+    "texto": "Transformamos realidades caminando junto a las comunidades.",
+    "fotoEtiqueta": "Foto"
+  },
+  "impacto": {
+    "titulo": "Transformamos vidas",
+    "texto": "Generamos espacios y proyectos sociales basados en la diversidad, la inclusión y estrategias que impulsan nuestro objeto social. Nos sostiene un equipo humano comprometido y solidario, dispuesto a trabajar por la comunidad y a transformar vidas.",
+    "boton": { "texto": "Hazte socio", "href": "/dona" }
+  },
+  "empresas": {
+    "etiqueta": "Nuevo",
+    "titulo": "Empresas aliadas",
+    "texto": "Las donaciones de empresas y personas declarantes a entidades del Régimen Tributario Especial dan derecho a un descuento en el impuesto de renta equivalente al 25% del valor donado (artículo 257 del Estatuto Tributario).",
+    "checks": [
+      "Certificado de donación firmado para cada aporte.",
+      "Informe mensual de impacto, útil para tu reporte de sostenibilidad.",
+      "Aporte por transferencia, con acuerdo de vinculación sencillo."
+    ],
+    "boton": { "texto": "Quiero vincular mi empresa", "href": "/#contacto" },
+    "calculadora": {
+      "etiqueta": "Aporte mensual de tu empresa:",
+      "min": 500000,
+      "max": 10000000,
+      "paso": 250000,
+      "valorInicial": 2000000,
+      "porcentaje": 0.25,
+      "filaAnual": "Aporte en el año",
+      "filaDescuento": "Descuento potencial en renta (25%)",
+      "filaNeto": "Costo neto para la empresa",
+      "nota": "Cálculo ilustrativo. El descuento, sumado a otros descuentos de los artículos 255 y 256, no puede superar el 25% del impuesto de renta a cargo; el excedente puede tomarse el año siguiente. Consulta con tu contador."
+    }
+  },
+  "eventos": {
+    "titulo": "Próximos eventos",
+    "texto": "Marca tu calendario"
+  },
+  "contacto": {
+    "voluntario": {
+      "titulo": "Ser voluntario",
+      "texto": "¡Escríbenos para sumarte a nuestra causa!",
+      "asuntos": ["Quiero ser voluntario", "Vincular mi empresa", "Información general"],
+      "consentimiento": "Autorizo a la Fundación Somos Cokua a tratar mis datos personales para responder esta solicitud, según su <a href=\"/politica-de-datos\" target=\"_blank\" rel=\"noopener\">Política de Tratamiento de Datos</a> (Ley 1581 de 2012).",
+      "boton": "Enviar"
+    },
+    "certificado": {
+      "etiqueta": "Nuevo",
+      "titulo": "Certificado de donación",
+      "texto": "Si donaste a la fundación, solicita aquí tu certificado para la declaración de renta.",
+      "tiposDocumento": ["Cédula de ciudadanía", "NIT", "Cédula de extranjería"],
+      "mediosPago": ["Tarjeta (Wompi)", "PayPal", "Transferencia Bancolombia", "Suscripción mensual"],
+      "consentimiento": "Autorizo el tratamiento de mis datos personales para la expedición del certificado de donación, según la <a href=\"/politica-de-datos\" target=\"_blank\" rel=\"noopener\">Política de Tratamiento de Datos</a> (Ley 1581 de 2012).",
+      "boton": "Solicitar certificado"
+    },
+    "errorCampos": "Completa los campos marcados con * y la autorización de datos.",
+    "formularioInactivo": "Este formulario aún no está activo. Escríbenos a {correo} y te respondemos."
+  },
+  "dona": {
+    "etiqueta": "Dona aquí",
+    "titulo": "Hazte donador mensual",
+    "texto": "Un aporte pequeño y constante nos permite planear con tiempo en lugar de empezar de cero cada mes. A cambio, cada mes te contamos en qué se usó el dinero, con cifras y una historia de la comunidad.",
+    "notaPago": "Cobro mensual automático con tarjeta débito o crédito. Puedes cancelar cuando quieras.",
+    "planSinEnlace": "La suscripción mensual se habilitará muy pronto. Mientras tanto, puedes hacer una donación única con los canales de abajo.",
+    "comoFunciona": {
+      "titulo": "Cómo funciona",
+      "pasos": [
+        { "titulo": "Eliges tu plan", "texto": "Amigo, Aliado o Padrino, según lo que puedas aportar cada mes." },
+        { "titulo": "Registras tu tarjeta", "texto": "El cobro se hace automáticamente cada mes en la pasarela de pagos de la fundación." },
+        { "titulo": "Recibes tu informe", "texto": "A comienzos de cada mes te llega por correo en qué se invirtió lo recaudado." }
+      ]
+    },
+    "unaVez": {
+      "pregunta": "¿Prefieres donar una sola vez?",
+      "texto": "Usa nuestros canales oficiales:",
+      "tarjeta": "Donar con tarjeta",
+      "paypal": "Donar con PayPal",
+      "transferencia": "Transferencia Bancolombia",
+      "transferenciaSinDatos": "Escríbenos para recibir los datos de la cuenta."
+    },
+    "faqTitulo": "Preguntas frecuentes"
+  },
+  "footer": {
+    "enlaces": [
+      { "texto": "Donar ahora", "href": "/dona" },
+      { "texto": "Transparencia e informes", "href": "/#transparencia" },
+      { "texto": "Documentos de constitución legal", "href": "/#transparencia" },
+      { "texto": "Política de tratamiento de datos", "href": "/politica-de-datos" },
+      { "texto": "Preguntas frecuentes", "href": "/dona#preguntas" }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+---
+import t from '../../content/textos.json';
+const c = t.empresas.calculadora;
+const fmt = (n: number) => '$' + Math.round(n).toLocaleString('es-CO');
+const anual = c.valorInicial * 12;
+---
+<section id="empresas" class="band band--ink">
+  <div class="wrap biz">
+    <div class="text">
+      <span class="new" style="align-self:flex-start">{t.empresas.etiqueta}</span>
+      <h2>{t.empresas.titulo}</h2>
+      <p class="lede">{t.empresas.texto}</p>
+      <ul class="checks">
+        {t.empresas.checks.map((x) => <li>{x}</li>)}
+      </ul>
+      <div><a class="btn btn--orange" href={t.empresas.boton.href}>{t.empresas.boton.texto}</a></div>
+    </div>
+    <div class="calc" data-porcentaje={c.porcentaje}>
+      <label for="aporte">{c.etiqueta} <b id="aporte-label">{fmt(c.valorInicial)}</b></label>
+      <input id="aporte" type="range" min={c.min} max={c.max} step={c.paso} value={c.valorInicial}>
+      <table>
+        <tr><td>{c.filaAnual}</td><td id="c-anual">{fmt(anual)}</td></tr>
+        <tr><td>{c.filaDescuento}</td><td id="c-desc">{fmt(anual * c.porcentaje)}</td></tr>
+        <tr class="total"><td>{c.filaNeto}</td><td id="c-neto">{fmt(anual - anual * c.porcentaje)}</td></tr>
+      </table>
+      <p class="fine">{c.nota}</p>
+    </div>
+  </div>
+</section>
+<script>
+  import '../../scripts/calculadora.ts';
+</script>

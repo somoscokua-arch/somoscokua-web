@@ -1,0 +1,19 @@
+{
+  "planes": {
+    "amigo":   { "_nota": "PENDIENTE: enlace de la pasarela de la fundación", "url": "" },
+    "aliado":  { "_nota": "PENDIENTE: enlace de la pasarela de la fundación", "url": "" },
+    "padrino": { "_nota": "PENDIENTE: enlace de la pasarela de la fundación", "url": "" }
+  },
+  "donacionUnica": {
+    "wompi": "https://checkout.wompi.co/l/VPOS_bWvkEp",
+    "paypal": "https://www.paypal.com/ncp/payment/QWUVJYZ5S98UA"
+  },
+  "transferencia": {
+    "_nota": "PENDIENTE: datos de la cuenta Bancolombia de la fundación. qrImagen es la ruta de la imagen del QR dentro de /public (ej. /qr-bancolombia.png)",
+    "banco": "",
+    "tipoCuenta": "",
+    "numeroCuenta": "",
+    "titular": "",
+    "qrImagen": ""
+  }
+}

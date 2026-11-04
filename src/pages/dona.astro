@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import t from '../content/textos.json';
+import DonaHero from '../components/dona/DonaHero.astro';
+import Planes from '../components/dona/Planes.astro';
+import ComoFunciona from '../components/dona/ComoFunciona.astro';
+import DonacionUnica from '../components/dona/DonacionUnica.astro';
+import Faq from '../components/dona/Faq.astro';
+---
+<Base titulo={t.meta.dona.titulo} descripcion={t.meta.dona.descripcion}>
+  <DonaHero />
+  <Planes />
+  <ComoFunciona />
+  <DonacionUnica />
+  <Faq />
+</Base>

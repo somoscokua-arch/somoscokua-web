@@ -1,0 +1,30 @@
+---
+import sitio from '../config/sitio.json';
+import textos from '../content/textos.json';
+const { redes } = sitio;
+const redesVisibles = [
+  { nombre: 'Instagram', url: redes.instagram },
+  { nombre: 'Facebook', url: redes.facebook },
+  { nombre: 'TikTok', url: redes.tiktok },
+].filter((r) => r.url); // TikTok queda oculto mientras no tenga URL
+---
+<footer>
+  <div class="wrap foot">
+    <div><a class="logo" href="/" aria-label="Inicio"><svg viewBox="0 0 240 200" role="img"><use href="#cokua-logo"/></svg></a></div>
+    <div>
+      <b>{sitio.nombre}</b><br>
+      {sitio.nit.valor && <>NIT {sitio.nit.valor}<br></>}
+      {sitio.direccion.linea1}<br>
+      {sitio.direccion.linea2}<br>
+      {sitio.correo.valor}<br>
+      © 2026 {sitio.nombre}
+    </div>
+    <ul>
+      {textos.footer.enlaces.map((e) => <li><a href={e.href}>{e.texto}</a></li>)}
+    </ul>
+    <ul>
+      {redesVisibles.map((r) => <li><a href={r.url} target="_blank" rel="noopener">{r.nombre}</a></li>)}
+    </ul>
+  </div>
+  <div class="wrap foot-bottom">{sitio.descripcionCorta}</div>
+</footer>

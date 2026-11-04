@@ -1,0 +1,21 @@
+---
+import t from '../content/textos.json';
+import sitio from '../config/sitio.json';
+const f = t.contacto.voluntario;
+---
+<form class="form-card" id="form-vol" novalidate data-correo={sitio.correo.valor} data-msg-error={t.contacto.errorCampos} data-msg-inactivo={t.contacto.formularioInactivo}>
+  <h2>{f.titulo}</h2>
+  <p>{f.texto}</p>
+  <div class="grid2">
+    <div class="field"><label for="v-nombre">Nombre *</label><input id="v-nombre" required></div>
+    <div class="field"><label for="v-apellidos">Apellidos *</label><input id="v-apellidos" required></div>
+    <div class="field full"><label for="v-org">Organización o empresa</label><input id="v-org"></div>
+    <div class="field"><label for="v-correo">Correo electrónico *</label><input id="v-correo" type="email" required></div>
+    <div class="field"><label for="v-asunto">Asunto</label>
+      <select id="v-asunto">{f.asuntos.map((a) => <option>{a}</option>)}</select></div>
+    <div class="field full"><label for="v-msg">Mensaje</label><textarea id="v-msg"></textarea></div>
+  </div>
+  <label class="consent"><input type="checkbox" id="v-ok" required><span set:html={f.consentimiento} /></label>
+  <button class="btn btn--teal" type="submit">{f.boton}</button>
+  <p class="form-msg" aria-live="polite"></p>
+</form>

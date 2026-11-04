@@ -1,0 +1,24 @@
+---
+import t from '../content/textos.json';
+import sitio from '../config/sitio.json';
+const f = t.contacto.certificado;
+---
+<form class="form-card" id="certificado" novalidate data-correo={sitio.correo.valor} data-msg-error={t.contacto.errorCampos} data-msg-inactivo={t.contacto.formularioInactivo}>
+  <span class="new" style="align-self:flex-start">{f.etiqueta}</span>
+  <h2>{f.titulo}</h2>
+  <p>{f.texto}</p>
+  <div class="grid2">
+    <div class="field full"><label for="c-nombre">Nombre o razón social *</label><input id="c-nombre" required></div>
+    <div class="field"><label for="c-tipo">Tipo de documento *</label>
+      <select id="c-tipo">{f.tiposDocumento.map((x) => <option>{x}</option>)}</select></div>
+    <div class="field"><label for="c-num">Número *</label><input id="c-num" inputmode="numeric" required></div>
+    <div class="field"><label for="c-valor">Valor donado (COP) *</label><input id="c-valor" inputmode="numeric" required></div>
+    <div class="field"><label for="c-fecha">Fecha de la donación *</label><input id="c-fecha" type="date" required></div>
+    <div class="field"><label for="c-medio">Medio de pago</label>
+      <select id="c-medio">{f.mediosPago.map((x) => <option>{x}</option>)}</select></div>
+    <div class="field"><label for="c-correo">Correo para enviarlo *</label><input id="c-correo" type="email" required></div>
+  </div>
+  <label class="consent"><input type="checkbox" id="c-ok" required><span set:html={f.consentimiento} /></label>
+  <button class="btn btn--teal" type="submit">{f.boton}</button>
+  <p class="form-msg" aria-live="polite"></p>
+</form>

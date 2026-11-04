@@ -1,0 +1,18 @@
+---
+import t from '../../content/textos.json';
+import linea from '../../content/historia.json';
+---
+<section id="historia" class="band" style="padding-top:0">
+  <div class="wrap history">
+    <div class="text">
+      <h2>{t.historia.titulo}</h2>
+      {t.historia.parrafos.map((p) => <p>{p}</p>)}
+      <div><a class="btn btn--ink" href={t.historia.boton.href}>{t.historia.boton.texto}</a></div>
+    </div>
+    <ol class="timeline" aria-label={t.historia.etiquetaLinea}>
+      {linea.map((h) => (
+        <li><span class="yr">{h.anio}</span><div><b>{h.titulo}</b><span>{h.texto}</span></div></li>
+      ))}
+    </ol>
+  </div>
+</section>

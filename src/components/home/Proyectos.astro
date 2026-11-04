@@ -1,0 +1,18 @@
+---
+import t from '../../content/textos.json';
+import proyectos from '../../content/proyectos.json';
+import Photo from '../Photo.astro';
+---
+<section id="proyectos" class="band" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>{t.proyectos.titulo}</h2>
+      <p class="lede">{t.proyectos.texto}</p>
+    </div>
+    <div class="projects">
+      {proyectos.map((p) => (
+        <article class="proj"><Photo etiqueta={t.proyectos.fotoEtiqueta} /><h4>{p.titulo}</h4><p>{p.descripcion}</p></article>
+      ))}
+    </div>
+  </div>
+</section>

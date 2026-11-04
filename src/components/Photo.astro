@@ -1,0 +1,6 @@
+---
+// Espacio de color que sustituye a las fotos hasta tenerlas.
+interface Props { etiqueta: string }
+const { etiqueta } = Astro.props;
+---
+<div class="photo"><span>{etiqueta}</span></div>

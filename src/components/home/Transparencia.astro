@@ -1,0 +1,51 @@
+---
+import t from '../../content/textos.json';
+import inf from '../../content/informes.json';
+const r = inf.actual;
+const resumen = r.distribucion.map((d) => `${d.corto} ${d.porcentaje}%`).join(', ');
+---
+<section id="transparencia" class="band">
+  <div class="wrap transp">
+    <div class="stack">
+      <span class="new">{t.transparencia.etiqueta}</span>
+      <h2>{t.transparencia.titulo}</h2>
+      <p class="lede">{t.transparencia.texto}</p>
+      <div class="rte" set:html={t.transparencia.nota} />
+      <div>
+        <p class="eyebrow" style="margin-bottom:8px">{t.transparencia.tituloArchivo}</p>
+        <ul class="archive">
+          {inf.archivo.map((a) => (
+            <li>
+              <span>{a.titulo}</span>
+              {a.url ? <a href={a.url}><em>{a.nota}</em></a> : <em>{a.nota}</em>}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <article class="report" aria-label={t.transparencia.ariaInforme}>
+      <div class="report-top">
+        <div>
+          <p class="eyebrow">{t.transparencia.etiquetaInforme}</p>
+          <h3>{r.mes}</h3>
+        </div>
+        {r.sello && <span class="stamp">{r.sello}</span>}
+      </div>
+      <div class="kpis">
+        {r.kpis.map((k) => <div class="kpi"><b>{k.valor}</b><span>{k.etiqueta}</span></div>)}
+      </div>
+      <div>
+        <div class="bar" role="img" aria-label={`Distribución: ${resumen}`}>
+          {r.distribucion.map((d) => <i style={`width:${d.porcentaje}%;background:var(--${d.color})`}></i>)}
+        </div>
+      </div>
+      <ul class="legend">
+        {r.distribucion.map((d) => (
+          <li><i class="dot" style={`background:var(--${d.color})`}></i><span>{d.etiqueta}</span><span class="v">{d.monto}</span></li>
+        ))}
+      </ul>
+      <p class="story"><b>{r.historiaTitulo}</b> {r.historia}</p>
+    </article>
+  </div>
+</section>

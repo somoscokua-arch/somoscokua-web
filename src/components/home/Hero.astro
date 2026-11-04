@@ -1,0 +1,11 @@
+---
+import t from '../../content/textos.json';
+import Photo from '../Photo.astro';
+---
+<section id="inicio" class="band--teal hero">
+  <div class="wrap">
+    <h1>{t.hero.titulo}</h1>
+    <p class="sub">{t.hero.subtitulo}</p>
+    <div class="hero-photo"><Photo etiqueta={t.hero.foto} /></div>
+  </div>
+</section>

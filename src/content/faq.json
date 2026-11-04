@@ -1,0 +1,22 @@
+[
+  {
+    "pregunta": "¿Puedo cancelar o cambiar mi plan?",
+    "respuesta": "Sí, cuando quieras. Escríbenos o usa el enlace de gestión que llega con tu primer cobro, y el siguiente mes ya no se te cobra."
+  },
+  {
+    "pregunta": "¿Recibo certificado para mi declaración de renta?",
+    "respuesta": "Sí. Somos Entidad Sin Ánimo de Lucro del Régimen Tributario Especial. Puedes <a href=\"/#certificado\">solicitar tu certificado de donación</a> en cualquier momento."
+  },
+  {
+    "pregunta": "¿Con qué medios puedo pagar la donación mensual?",
+    "respuesta": "Con tarjeta débito o crédito, porque el cobro automático solo funciona con tarjeta. Si prefieres PSE o transferencia, puedes hacer donaciones únicas cuando quieras."
+  },
+  {
+    "pregunta": "¿Cómo sé que mi aporte se usa bien?",
+    "respuesta": "Publicamos cada mes un informe de una página con lo recibido y en qué se invirtió. Puedes ver el ejemplo en <a href=\"/#transparencia\">Transparencia</a>."
+  },
+  {
+    "pregunta": "Soy una empresa, ¿cómo puedo aportar?",
+    "respuesta": "Tenemos un esquema para empresas aliadas por transferencia, con certificado y reporte de impacto. Mira la sección <a href=\"/#empresas\">Empresas</a>."
+  }
+]

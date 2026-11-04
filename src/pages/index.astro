@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import t from '../content/textos.json';
+import Hero from '../components/home/Hero.astro';
+import Quienes from '../components/home/Quienes.astro';
+import Historia from '../components/home/Historia.astro';
+import TeaserSocio from '../components/home/TeaserSocio.astro';
+import Transparencia from '../components/home/Transparencia.astro';
+import Proyectos from '../components/home/Proyectos.astro';
+import Impacto from '../components/home/Impacto.astro';
+import Empresas from '../components/home/Empresas.astro';
+import Eventos from '../components/home/Eventos.astro';
+import Contacto from '../components/home/Contacto.astro';
+---
+<Base titulo={t.meta.home.titulo} descripcion={t.meta.home.descripcion}>
+  <Hero />
+  <Quienes />
+  <Historia />
+  <TeaserSocio />
+  <Transparencia />
+  <Proyectos />
+  <Impacto />
+  <Empresas />
+  <Eventos />
+  <Contacto />
+</Base>

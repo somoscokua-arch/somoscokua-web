@@ -1,0 +1,43 @@
+[
+  {
+    "id": "amigo",
+    "nombre": "Amigo Cokua",
+    "precio": "$10.000",
+    "periodo": "COP / mes",
+    "destacado": false,
+    "etiqueta": "",
+    "beneficios": [
+      "Informe mensual de uso de fondos",
+      "Invitación a jornadas abiertas"
+    ],
+    "boton": "Quiero ser Amigo"
+  },
+  {
+    "id": "aliado",
+    "nombre": "Aliado Cokua",
+    "precio": "$20.000",
+    "periodo": "COP / mes",
+    "destacado": true,
+    "etiqueta": "El más elegido",
+    "beneficios": [
+      "Informe mensual de uso de fondos",
+      "Invitación a jornadas abiertas",
+      "Certificado de donación anual para tu declaración de renta"
+    ],
+    "boton": "Quiero ser Aliado"
+  },
+  {
+    "id": "padrino",
+    "nombre": "Padrino Cokua",
+    "precio": "$50.000",
+    "periodo": "COP / mes",
+    "destacado": false,
+    "etiqueta": "",
+    "beneficios": [
+      "Todo lo del plan Aliado",
+      "Visita guiada a un proyecto al año",
+      "Tu nombre en el muro de padrinos (si lo autorizas)"
+    ],
+    "boton": "Quiero ser Padrino"
+  }
+]

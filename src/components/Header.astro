@@ -1,0 +1,19 @@
+---
+import textos from '../content/textos.json';
+const enDona = Astro.url.pathname.replace(/\/$/, '') === '/dona';
+---
+<header class="site-head">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Fundación Somos Cokua, inicio"><svg viewBox="0 0 240 200" role="img"><use href="#cokua-logo"/></svg></a>
+    <nav class="nav" aria-label="Principal">
+      {textos.nav.enlaces.map((e) => <a href={e.href} data-nav-home>{e.texto}</a>)}
+      <a href={textos.nav.dona.href} class="nav-dona" aria-current={enDona ? 'page' : undefined}>{textos.nav.dona.texto}</a>
+    </nav>
+    <div class="head-cta">
+      <a class="btn btn--white" href={textos.nav.dona.href}>{textos.nav.dona.texto}</a>
+    </div>
+  </div>
+</header>
+<script>
+  import '../scripts/nav.ts';
+</script>
