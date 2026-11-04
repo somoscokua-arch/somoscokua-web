@@ -36,6 +36,7 @@ Algunos textos de los JSON contienen HTML (enlaces) y se pintan con `set:html`: 
 - `.new` ("Nuevo") es siempre una píldora pequeña alineada a la izquierda (regla global en `global.css`).
 
 ## Pendientes
+00. **Día del lanzamiento: pasar `indexable` a `true` en `src/config/sitio.json`.** Mientras sea `false` (versión de prueba pública) todas las páginas llevan `<meta name="robots" content="noindex">` y `/robots.txt` bloquea a los buscadores, para no competir en Google con la web actual.
 0. **Validar con el contador de la fundación que los beneficios empresariales no constituyan contraprestación** (mención en la web, jornadas de voluntariado corporativo, informe trimestral), porque podrían afectar el carácter de donación y el descuento del art. 257 E.T.
 1. **Enlaces de pasarela** de los planes Amigo, Aliado y Padrino (`pagos.json → planes.*.url`, marcados "PENDIENTE: enlace de la pasarela de la fundación").
 2. **Datos de la cuenta Bancolombia** y la imagen del QR (`pagos.json → transferencia`; poner el QR en `public/`).

@@ -19,5 +19,7 @@
     "facebook": "https://www.facebook.com/share/1cdtfZbMBX/",
     "tiktok": "",
     "_nota": "TikTok queda oculto en el footer mientras la URL esté vacía"
-  }
+  },
+  "indexable": false,
+  "_notaIndexable": "false = versión de prueba: noindex en todas las páginas y robots.txt que bloquea buscadores. PENDIENTE: pasar a true el día del lanzamiento."
 }

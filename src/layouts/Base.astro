@@ -3,6 +3,7 @@ import '../styles/global.css';
 import LogoSprite from '../components/LogoSprite.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import sitio from '../config/sitio.json';
 
 interface Props { titulo: string; descripcion: string }
 const { titulo, descripcion } = Astro.props;
@@ -14,6 +15,7 @@ const { titulo, descripcion } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{titulo}</title>
     <meta name="description" content={descripcion} />
+    {!sitio.indexable && <meta name="robots" content="noindex" />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
